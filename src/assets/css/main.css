@@ -450,69 +450,59 @@ p {
     10.cash FOOTER css 
 ===========================*/
 .cash-footer-area {
-  background: #eef1f6;
-  padding-top: 50px;
-  padding-bottom: 60px;
+  /* background:#4f545c; */
+  background:white;
 }
-
-
-.footer-about-widget {
-  padding-right: 70px;
-  margin-top: 30px;
+.cash-footer-area .social-bar {
+  background: #0288d1;
+  justify-content: right;
+  padding: 20px 10%;
 }
-@media (max-width: 767px) {
-  .footer-about-widget {
-    text-align: center;
-    padding-right: 0;
-  }
-}
-.footer-about-widget p {
-  padding-top: 25px;
-}
-.footer-about-widget > a {
-  font-size: 15px;
-  font-weight: 500;
-  color: #0e1133;
-  margin-top: 15px;
-}
-.footer-about-widget > a i {
-  padding-left: 6px;
-}
-.footer-about-widget .social ul {
+.cash-footer-area .social ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.footer-about-widget .social ul li {
+.cash-footer-area .social ul li {
   display: inline-block;
+  padding: 0 5px;
 }
-.footer-about-widget .social ul li a {
+.cash-footer-area .social ul li a {
   height: 36px;
   width: 36px;
   text-align: center;
   background: #fff;
-  color: #0e1133;
+  color: #0288d1;
   border-radius: 6px;
   line-height: 36px;
   margin-right: 5px;
 }
-.footer-about-widget .social ul li a:hover {
-  background: #2b70fa;
+.cash-footer-area .social ul li a:hover {
+  background: #4dabdf;
   color: #fff;
 }
 
+.footer-navigation-area {
+  background-color: #4f545c;
+  padding-bottom: 30px;
+}
 .footer-navigation {
   margin-top: 30px;
+  padding: 0 30px;
 }
+
 @media (max-width: 767px) {
   .footer-navigation {
     text-align: center;
   }
 }
+
 .footer-navigation .title {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: white;
 }
 .footer-navigation ul {
   margin: 0;
@@ -520,52 +510,19 @@ p {
   list-style-type: none;
 }
 .footer-navigation ul li a {
-  color: #505056;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 100;
   margin-bottom: 6px;
+  color: white;
 }
 .footer-navigation ul li a:hover {
-  color: #2b70fa;
-}
-
-.footer-widget-info {
-  margin-top: 30px;
-}
-@media (max-width: 767px) {
-  .footer-widget-info {
-    text-align: center;
-  }
-}
-.footer-widget-info .title {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-.footer-widget-info ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.footer-widget-info ul li a {
-  color: #505056;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  padding-left: 30px;
-  position: relative;
-}
-.footer-widget-info ul li a i {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #2b70fa;
+  color: #0288d1;
 }
 
 .footer-copyright {
-  padding-top: 35px;
-  border-top: 1px solid #e1e5ec;
-  margin-top: 80px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #323741;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-copyright {
@@ -579,64 +536,13 @@ p {
     text-align: center;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .footer-copyright .apps-download-btn {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .footer-copyright .apps-download-btn {
-    margin-bottom: 20px;
-  }
-}
-.footer-copyright .apps-download-btn ul {
-  padding: 0;
-  list-style-type: none;
-}
-.footer-copyright .apps-download-btn ul li {
-  display: inline-block;
-  margin-right: 8px;
-}
-@media (max-width: 767px) {
-  .footer-copyright .apps-download-btn ul li {
-    margin-bottom: 20px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .footer-copyright .apps-download-btn ul li {
-    margin-bottom: 0px;
-  }
-}
-.footer-copyright .apps-download-btn ul li a {
-  background: #fff;
-  color: #0e1133;
-  line-height: 40px;
-  padding: 0 23px;
-  border-radius: 6px;
-  border: 2px solid #fff;
-}
-.footer-copyright .apps-download-btn ul li a i {
-  padding-right: 6px;
-}
-.footer-copyright .apps-download-btn ul li a:hover {
-  background: transparent;
-  color: #0e1133;
-  border-color: #e7eaef;
-}
-.footer-copyright .apps-download-btn ul li a.item-2 {
-  background: transparent;
-  color: #0e1133;
-  border-color: #e7eaef;
-}
-.footer-copyright .apps-download-btn ul li a.item-2:hover {
-  background: #fff;
-  color: #0e1133;
+.copyright-text p {
+  color: #a7a7ad;
 }
 
 .cash-error-area {
   padding-top: 250px;
 }
-
 .cash-error-content span {
   display: block;
   font-size: 50px;

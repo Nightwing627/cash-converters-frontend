@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop';
 import useToggle from './Hooks/useToggle';
 import Drawer from './components/Drawer';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 import Career from './components/pages/joinus/career';
 import Store from './components/pages/joinus/store';
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/joinus/loancenter" element={<LoanCenter />} />
                 <Route path="/joinus/headoffice" element={<HeadOffice />} />
               </Routes>
+              <Footer />
           </ScrollToTop>
         </Router>     
       </div>
