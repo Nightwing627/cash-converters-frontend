@@ -145,7 +145,7 @@
   height: fit-content;
 }
 .banner-image {
-  width: max-content;
+  width: 100%;
   opacity: 0.65;
 }
 .banner-title-area {
@@ -194,3 +194,87 @@
 {
   color: #f0b500
 }
+.section-card {
+  padding: 80px 12% 0 12%;
+}
+.text-card-area .title {
+  font-size: 40px;
+  font-weight: 500;
+}
+.text-card-area .text-card-content {
+  font-size: 20px;
+  margin-top: 60px;
+  line-height: 40px;
+}
+.option-area {
+  padding-bottom: 60px;
+  grid-gap: 30px 60px;
+}
+/** TODO: responsive */
+.option-area .option-item img {
+  padding: 10%;
+}
+.option-area .option-item p:first-of-type {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #990a2c;
+  font-weight: bold;
+}
+.option-area .option-item p:last-of-type {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.service-card .service-card-text {
+  padding: 0 5%;
+}
+.service-card .service-title,
+.service-out-title {
+  font-size: 40px;
+  line-height: 28px;
+  margin-bottom: 28px;
+}
+.service-out-title {
+  padding-bottom: 50px;
+}
+.service-card .service-content {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.service-card .service-btn {
+  font-size: 20px;
+  background: #0288d1;
+  color: white;
+  padding: 5px 40px;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.service-card .service-btn:hover {
+  background-color: #2b70fa;
+}
+.service-section {
+  background-color: #f0eeed;
+  padding-bottom: 80px;
+}
+.diversity-section {
+  border-top: 3px solid #505056;
+  padding-top: 60px;
+  margin-top: 50px;
+  
+}
+.diversity-item {
+  padding-bottom: 60px;
+}
+.diversity-title {
+  font-size: 40px;
+    line-height: 28px;
+}
+.diversity-summary {
+  font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 28px;
+    padding-top: 60px;
+}
+
