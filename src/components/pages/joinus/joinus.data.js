@@ -9,6 +9,14 @@ import LaonService from '../../../assets/images/services/loancenter.jpg'
 import HeadService from '../../../assets/images/services/headoffice.jpg'
 import DiversityService from '../../../assets/images/services/teamwork.jpg'
 
+import AA from '../../../assets/images/ways/aa.jpg'
+import DevelopmentImg from '../../../assets/images/ways/development.jpg'
+import Event from '../../../assets/images/ways/event.jpg'
+import FreeLoan from '../../../assets/images/ways/free-loan.png'
+import Membership from '../../../assets/images/ways/membership.png'
+import Retail from '../../../assets/images/ways/retail.jpg'
+
+
 const TrueStory = {
     title: "True Story",
     content: `Cash Converters is not only a great place to shop… it’s also a great place to work!</br>
@@ -241,7 +249,81 @@ export const photos = [
       width: 4,
       height: 3
     },
-  ];
+];
   
+export const CareWays = [
+    {
+        id: 1,
+        title: '20% Off Retail Stock',
+        summary: 'Fabulous staff discounts across all stores in New Zealand',
+        imgSrc: Retail,
+    },{
+        id: 2,
+        title: 'Interest Free Loans',
+        summary: 'Cash when you need it and when you want it',
+        imgSrc: FreeLoan
+    },{
+        id: 3,
+        title: 'Development',
+        summary: 'Training and support to get reach your potential',
+        imgSrc: DevelopmentImg
+    },{
+        id: 4,
+        title: 'Fun Team Events',
+        summary: 'Celebrate success with fun adventures with your team.',
+        imgSrc: Event
+    },{
+        id: 5,
+        title: 'AA Membership',
+        summary: 'Roadside assistance? We\'ve got you covered.',
+        imgSrc: AA
+    },{
+        id: 6,
+        title: '1Team Membership',
+        summary: 'Enjoy discounts with other amazing retailers.',
+        imgSrc: Membership
+    }
+]
+
+export const Faqs = {
+    rows: [
+        {
+            title: 'Do you offer part-time or casual positions?',
+            content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged.`
+        },{
+            title: 'Can I work for Cash Converters whilst on a visa?',
+            content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged.`
+        },{
+            title: 'If successful in gaining a position, will I get career progression?',
+            content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged.`
+        },{
+            title: 'I want to work in finance and have no experience, can I still apply?',
+            content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged.`
+        },{
+            title: 'Does Cash Converters just sell second-hand goods?',
+            content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged.`
+        },{
+            title: 'Is Cash Converters a New Zealand business?',
+            content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged.`
+        },{
+            title: 'Is the Loan Centre based in a store?',
+            content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially unchanged.`
+        }
+    ]
+}
 
 export default TrueStory;
