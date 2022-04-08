@@ -224,7 +224,9 @@
   font-size: 20px;
   margin-top: 10px;
 }
-
+.bg-section {
+  background-color: #f0eeed;
+}
 .service-card .service-card-text {
   padding: 0 5%;
 }
@@ -253,6 +255,13 @@
 }
 .service-card .service-btn:hover {
   background-color: #2b70fa;
+}
+.service-card .service-card-image {
+  height: 60vh;
+}
+.service-card .service-card-image img {
+  height: 100%;
+  object-fit: cover;
 }
 .service-section {
   background-color: #f0eeed;
@@ -304,4 +313,98 @@
 }
 .faq-body .faq-row .row-title span.icon-wrapper {
   max-height: none !important;
+}
+.video-area {
+  margin-top: 60px;
+  background-color: #f0eeed;
+}
+.video-area .video-header {
+  text-align: center;
+  background-color: #0288d1;
+}
+.video-area .video-header p {
+  font-size: 25px;
+  padding: 20px;
+  color: white;
+}
+.video-card {
+  width: 100%;
+  padding-right: 20%;
+  padding-left: 20%;
+  height: auto;
+  padding-bottom: 60px;
+}
+.video-thumbnail {
+  height: 70vh;
+  background: #5a5d63;
+  color: #eeb210;
+  font-size: 150px;
+  text-align: center;
+  align-items: center;
+  vertical-align: bottom;
+  padding-top: 18vh;
+}
+.video-thumbnail svg {
+  border-radius: 50%;
+  transition: linear 0.3s;
+  cursor: pointer;
+}
+.video-thumbnail svg:hover {
+  box-shadow: 0px 14px 20px 0px rgb(13 15 20 / 30%)
+}
+.video-thumbnail p {
+  font-size: 40px;
+  line-height: 48px;
+  color: white;
+  cursor:default;
+}
+.vacancy-content .vacancy-item p,
+.vacancy-content .vacancy-item div {
+  font-size: 20px;
+  line-height: 30px;
+}
+.testimonial-area {
+  margin-left: 5%;
+  margin-right: 10%;
+}
+.testimonial-image {
+  justify-content: center;
+  text-align: center;
+  display: inline-flex;
+}
+.testimonial-image img {
+  width: 70%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 6px 8px 9px -5px;
+}
+.testimonial-text,
+.testimonial-text p {
+  font-size: 20px;
+  line-height: 28px;
+}
+.testimonial-text p {
+  color: #990a2c;
+  font-weight: 500;
+}
+.testimonial-area .testimonial-next-arrow {
+  font-size: 50px;
+  color: black;
+}
+.testimonial-arrow {
+  width: fit-content;
+  height: fit-content;
+}
+.testimonial-arrow.slick-arrow::before {
+  display: none;
+}
+.testimonial-arrow svg {
+  font-size: 50px;
+  color: #5a5d63;
+}
+.testimonial-arrow.right {
+  right: -6%;
+}
+.testimonial-arrow.left {
+  left: -6%;
 }
