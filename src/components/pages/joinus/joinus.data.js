@@ -1,14 +1,17 @@
+/**Careers Options */
 import ConnectioOption from '../../../assets/images/options/connection.png'
 import EnthusiasmOption from '../../../assets/images/options/enthusiasm.png'
 import IntegrityOption from '../../../assets/images/options/integrity.png'
 import ProfessionalOption from '../../../assets/images/options/professionalism.png'
 import ResourcefulOption from '../../../assets/images/options/resourcefulness.png'
 
+/**Careers Services */
 import StoreService from '../../../assets/images/services/stores.jpg'
 import LaonService from '../../../assets/images/services/loancenter.jpg'
 import HeadService from '../../../assets/images/services/headoffice.jpg'
 import DiversityService from '../../../assets/images/services/teamwork.jpg'
 
+/**Careers ways */
 import AA from '../../../assets/images/ways/aa.jpg'
 import DevelopmentImg from '../../../assets/images/ways/development.jpg'
 import Event from '../../../assets/images/ways/event.jpg'
@@ -16,6 +19,7 @@ import FreeLoan from '../../../assets/images/ways/free-loan.png'
 import Membership from '../../../assets/images/ways/membership.png'
 import Retail from '../../../assets/images/ways/retail.jpg'
 
+/**Store Roles */
 import TeamMember from '../../../assets/images/roles/team-member.JPG'
 import BusinessPartner from '../../../assets/images/roles/business-partner.JPG'
 import Officer from '../../../assets/images/roles/officer.JPG'
@@ -23,10 +27,32 @@ import Specialist from '../../../assets/images/roles/specialist.JPG'
 import StoreManager from '../../../assets/images/roles/store-manager.JPG'
 import AssistManager from '../../../assets/images/roles/assist-manager.JPG'
 
+/**User Avatars */
 import User1 from '../../../assets/images/users/user-1.png'
 import User2 from '../../../assets/images/users/user-2.png'
 import User3 from '../../../assets/images/users/user-3.png'
 import User4 from '../../../assets/images/users/user-5.jpg'
+
+/**Loan Benefits */
+import DoctorVisists from '../../../assets/images/loan-benefits/doctor-visit.jpg'
+import FluVaccin from '../../../assets/images/loan-benefits/flu-vaccin.jpg'
+import Internet from '../../../assets/images/loan-benefits/internet.jpg'
+import Recognition from '../../../assets/images/loan-benefits/service-recognition.jpg'
+
+/**Loan Roles */
+import LoanSpecail from '../../../assets/images/loan-roles/specialist.jpg'
+import LoanSupervisor from '../../../assets/images/loan-roles/supervisor.jpg'
+import LoanTeamLeader from '../../../assets/images/loan-roles/team-leader.jpg'
+import LoanAssistant from '../../../assets/images/loan-roles/assistant.jpg'
+import LoanManager from '../../../assets/images/loan-roles/manager.jpg'
+
+/**HeadOffice Roles */
+import HeadITDev from '../../../assets/images/headoffice-roles/Developer.jpg'
+import HeadAccounting from '../../../assets/images/headoffice-roles/accounting.jpg'
+import HeadHR from '../../../assets/images/headoffice-roles/HR.jpg'
+import HeadAdmin from '../../../assets/images/headoffice-roles/Admin.jpg'
+import HeadMarketing from '../../../assets/images/headoffice-roles/Marketing.jpg'
+import HeadSupport from '../../../assets/images/headoffice-roles/Support.jpg'
 
 export const TrueStory = {
     title: "True Story",
@@ -531,5 +557,243 @@ export const Testimonials = [
         goals. There is nothing you can’t achieve if you set your mind to it!”`
     },
 ]
+
+export const WorkingLoan = {
+    title: 'Working in the Cash Converters Loan Centre',
+    content: `Based in the heart of Lower Hutt, our Loan Centre is a solution-focussed multi-function workplace where values matter and people feel like family!
+    They are our responsible lending champions who process applications for our popular personal loans and support our customers across all Cash
+    Converters products and services. This is a great place to learn and develop both finance industry and contact centre skills. It’s also a place where
+    opportunities for professional growth really happen – ask our team!</br>
+    Our Loan Centre is a vibrant, diverse environment where you get to work with seriously awesome co-workers and experience a culture that helps
+    you do your best and enjoy your time at work.</br>
+    In addition to the company benefits, the Loan Centre also has their own, tailored benefits including:`
+}
+
+export const LoanBenefits = [
+    {
+        id: 1,
+        title: 'Free Doctor\'s Visits',
+        summary: 'Keep your health in check with 3 free doctor\'s visits',
+        imgSrc: DoctorVisists
+    },{
+        id: 2,
+        title: 'Free Flue Vaccinations',
+        summary: 'Protect yourself from the flu with a free annual flu shot',
+        imgSrc: FluVaccin,
+    },{
+        id: 3,
+        title: 'Free Internet',
+        summary: 'Access comapany internet during your breaks',
+        imgSrc: Internet
+    },{
+        id: 4,
+        title: 'Long Service Recognition',
+        summary: 'Clelebrate your long service with our recognition program',
+        imgSrc: Recognition
+    }
+
+]
+
+export const LoanRoles = {
+    Specialist: {
+        title: 'Specialist',
+        summary: `Working together as a team, our specialists are a
+        powerhouse when it comes to short-term lending and their
+        drive, motivation and knowledge is what helps to make our
+        Loan Centre tick.</br>
+        Whether you are wanting to start or develop your career in
+        finance, get into the contact centre space and/or enhance
+        your customer service skills, this is the position for you!
+        Our Loan Centre specialist role will provide you with a full
+        scope of skills from assessing loan applications, making
+        loan approval decisions, answering general enquiries,
+        to finding solutions that help customers with financial
+        difficulty.</br>
+        No industry knowledge is necessary as we understand that
+        greatness comes in all forms. All we are looking for is a ‘can
+        do’ positive attitude and a willingness to learn.`,
+        imgSrc: LoanSpecail,
+    },
+    Supervisor: {
+        title: 'Supervisor',
+        summary: `Our Supervisors are highly driven by process, finding
+        solutions and maintaining excellent relationships. They
+        take pride in educating, both peers and customers, and
+        take full ownership for their individual results. They are
+        responsible for completing specialist tasks, as well as
+        assisting with managing workflow and providing training
+        and coaching to the team.</br>
+        Our Supervisor positions are seen as a stepping stone into
+        a Team Leader role. As we believe in promoting the next ‘up
+        and comer’ from within the Loan Centre, you will very rarely
+        see this role advertised externally.`,
+        imgSrc: LoanSupervisor,
+    },
+    TeamLeader: {
+        title: 'Team Leader',
+        summary: `We have a fantastic bunch of Team Leaders in our Loan
+        Centre. They are organised, punchy people motivators
+        that specialise in coaching and getting the best out of their
+        team.</br>
+        They have the respect and support of all their peers and are
+        natural leaders driven by bottom-line results. They have
+        a strong ethical compass and take responsibility for the
+        business, their teams and their performance.
+        Their abilities underpin our company values and culture,
+        resulting in a fun, professional working environment.
+        We are very proud to be able to say that 100% of our Team
+        Leaders are promoted from within and you will not see
+        these roles externally!`,
+        imgSrc: LoanTeamLeader,
+    },
+    Assistant: {
+        title: 'Assistant Manager',
+        summary: `Our Loan Centre Assistant Manager is influential and
+        humble. He is driven by challenges and in the pursuit of
+        excellence; both people and results. Being a great leader
+        he takes responsibility for everyone’s performance; most
+        importantly his own.</br>
+        He is passionate about people and is a born trailblazer;
+        leading the way when it comes to providing excellent
+        customer service.</br>
+        Join us at Cash Converters to meet this amazing leader and
+        hear his Cash Converters success story!`,
+        imgSrc: LoanAssistant,
+    },
+    Manager: {
+        title: 'Manager',
+        summary: `Our Loan Centre Manager is at the peak of leadership
+        and performance. Working closely with senior leaders
+        throughout the business, she is committed to getting the
+        Loan Centre and the team to its maximum potential. She
+        loves operating in a fast-paced environment, can think on
+        the fly and has the ability to remain cool, calm and collected
+        under pressure.</br>
+        Working for us, you will have the pleasure of meeting and
+        learning from this fantastic leader!`,
+        imgSrc: LoanManager,
+    },
+    
+}
+
+export const WorkingHeadOffice = {
+    title: 'Working in the Cash Converters Head Office',
+    content: `The Cash Converters Head Office isn’t like your typical corporate office. We are a fun, down to earth and easy going team with skills that contribute
+    to the overall success of the company. The day to day activities of the Head Office team ensure that the company has a strategic direction, a plan to
+    achieve that direction and a way to make sure that all parts of the business are working together like a well-oiled machine.</br>
+    The modern and contemporary Head Office is based in downtown Auckland City and overlooking the waterfront. It is a very short walk from the
+    main city transport hubs such as Britomart train station, the Downtown Ferry terminal and the Lower Albert Street bus stops.</br>
+    There are a number of teams within the office, from Acounting and IT development to Human Resources and Marketing. If you’re just starting out
+    your career or want to take the next step up, come work for us in the Cash Converters Head Office.`
+}
+
+export const HeadOfficeRoles = {
+    ITDev: {
+        title: 'IT Development',
+        summary: `Our in-house IT Development team are creators of the
+        systems and software that all Cash Converters products
+        and services run on.</br>
+        They maintain, improve and fix any and all IT related
+        issues. They are keen problem solvers and even better at
+        identifying issues that can be improved.</br>
+        Our IT Developers work with a wide range of code
+        languages to create high-quality and efficient systems that
+        meet industry standards.</br>
+        As an IT Developer at Cash Converters you will be involved
+        in researching, designing, implementing and managing the
+        systems and software that you create, which means you
+        get to see exactly how your creation contributes to the
+        overall performance of the business.`,
+        imgSrc: HeadITDev,
+    },
+    ITAdmin: {
+        title: 'IT Administration',
+        summary: `Our business is very unique and our systems and software
+        are equally as unique.</br>
+        Our IT Admins oversee the systems, software and
+        hardware across the entire business; from our company
+        stores and franchise stores, to our Loan Centre and Head
+        Office.</br>
+        They are responsible for maintaining the high performance
+        of our networks and cloud servers, while also performing
+        upgrades, installs and troubleshooting services.</br>
+        Because of the nature of our business, customer data is
+        extremely important and is securely protected. Our IT
+        Admins manage the security of our networks to make sure
+        our data remains private.`,
+        imgSrc: HeadAdmin,
+    },
+    Accounting: {
+        title: 'Accounting & Finance',
+        summary: `Our Accounting & Finance team have a wide range of
+        responsibilities managing both company accounts and
+        some franchise accounts.</br>
+        Being a part of our team means you will be responsible for
+        managing all accounting transactions, preparing budget
+        forecasts, publishing financial statements, handling
+        monthly, quarterly and annual closings, reconciling
+        accounts payables and receivables, managing tax returns
+        and providing financial reports.</br>
+        Our accountants have a keen eye for detail and have a flair
+        for spotting numerical mistakes. They ensure the business
+        is compliant with all financial policies and regulations,
+        and being in the business of short-term lending, this is
+        important.`,
+        imgSrc: HeadAccounting,
+    },
+    HR: {
+        title: 'Human Resources',
+        summary: `Cash Converters is a business focused on people. We
+        pride ourselves on providing an environment where our
+        team can learn, grow and develop both professionally and
+        personally.</br>
+        Our HR team is at the heart of this environment. They
+        develop and implement a range of HR initiatives and
+        systems, provide support and counseling on policies and
+        procedures and assist in the performance management of
+        all employees.</br>
+        HR also run the recruitment and hiring process, onboarding
+        of new employees and maintain the currency and accuracy
+        of all employee details.`,
+        imgSrc: HeadHR,
+    },
+    Marketing: {
+        title: 'Manager',
+        summary: `As a national leading brand, we value our reputation, public
+        perception and market share in New Zealand. People use
+        the services of a business that they know and trust, and it
+        is the job of our marketing team to make this happen.
+        Our marketers are responsible for market research to find
+        out what customers need in line with what the business
+        wants, developing ideas for creative campaigns and
+        implementing them to drive results.</br>
+        They use and manage a range of marketing initiatives from
+        in-store campaigns, POS, SEO, Search, Social Media, Direct
+        Comms and more.</br>
+        The marketing team also manages all Cash Converters
+        websites and works with the IT Developement team to
+        create user-friendly web experiences.`,
+        imgSrc: HeadMarketing,
+    },
+    Support: {
+        title: 'Business Support',
+        summary: `Cash Converters has a wide variety of roles in addition to
+        the traditional roles found in a corporate office. Business
+        Support covers everything from Executive Assistants to
+        Franchise Support.</br>
+        These roles are for all around superstars who have a
+        broad skillset and excellent people skills. They perform a
+        range of tasks from administration, reporting and data
+        management to assisting other departments such as
+        recruitment for HR and assisting with in-store campaigns
+        for Marketing.</br>
+        Business Support roles require people that are very
+        organized, resourceful, adaptable and proactive. Excellent
+        communication skills are a must as you will be interacting
+        with all areas and people of the business.`,
+        imgSrc: HeadSupport,
+    },
+    
+}
 
 export default TrueStory;

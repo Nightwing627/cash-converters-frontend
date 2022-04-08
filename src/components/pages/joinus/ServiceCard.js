@@ -14,15 +14,17 @@ export default function ServiceCard({ dir, btnName='', data: {title, summary, im
                         ${dir === 'right' ? 'order-1' : 'order-2'} service-card-text`}>
                     {title !== undefined && <p className="service-title text-center">{title}</p>}
                     <div className="service-content" dangerouslySetInnerHTML={{__html: summary}}></div>
-                    <div className="text-center">
-                        {link !== undefined ? 
-                        <Link className="service-btn" to={link}>
-                            {btnName === '' ? title : btnName}
-                        </Link> :
-                        <span className="service-btn"
-                            onClick={(e) => {setToggle(!show)}}>
-                            {btnName}</span>}
-                    </div>
+                    {link !== undefined || btnName !== '' &&
+                        <div className="text-center">
+                            {link !== undefined ? 
+                            <Link className="service-btn" to={link}>
+                                {btnName === '' ? title : btnName}
+                            </Link> :
+                            <span className="service-btn"
+                                onClick={(e) => {setToggle(!show)}}>
+                                {btnName}</span>}
+                        </div>
+                    }
                 </div>
                 <div 
                     className={`col-lg-6 col-md-12 col-sm-12 col-xs-12 p-0

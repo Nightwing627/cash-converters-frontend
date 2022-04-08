@@ -39,7 +39,7 @@ export default function Store() {
                     <p>View Store Vacancies</p>
                 </div>
                 <section className="section-card video-card">
-                    <div className="col-12 video-area">
+                    <div className="col-12 video-section">
                         {!showVideo ? 
                             <div className='video-thumbnail'>
                                 <FaPlayCircle onClick={handleShowVideo}/>
