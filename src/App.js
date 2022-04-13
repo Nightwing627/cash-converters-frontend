@@ -16,7 +16,16 @@ import HeadOffice from './components/pages/joinus/headoffice';
 function App() {
   const [loading, setLoading] = useState(true);
   const [drawer, drawerAction] = useToggle(false);
-  
+  const [width, setWinWidth] = useState(0);
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+
+    return() =>
+      window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -26,6 +35,11 @@ function App() {
       setLoading(false);
     }, 2000);
   });
+
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWinWidth(width);
+  }
 
   return (
     <React.Fragment>
@@ -38,14 +52,14 @@ function App() {
         <Router>
           <ScrollToTop>
               <Drawer drawer={drawer} action={drawerAction.toggle}></Drawer>
-              <Header action={drawerAction.toggle} />
+              <Header action={drawerAction.toggle} width={width} />
               <Routes>
-                <Route eact path="/" element={<Career />} />
-                <Route path="/joinus" element={<Career />} />
-                <Route path="/joinus/carrer" element={<Career />} />
-                <Route path="/joinus/store" element={<Store />} />
-                <Route path="/joinus/loancenter" element={<LoanCenter />} />
-                <Route path="/joinus/headoffice" element={<HeadOffice />} />
+                <Route eact path="/" element={<Career width={width} />} />
+                <Route path="/joinus" element={<Career width={width} />} />
+                <Route path="/joinus/carrer" element={<Career width={width} />} />
+                <Route path="/joinus/store" element={<Store width={width} />} />
+                <Route path="/joinus/loancenter" element={<LoanCenter width={width} />} />
+                <Route path="/joinus/headoffice" element={<HeadOffice width={width} />} />
               </Routes>
               <Footer />
           </ScrollToTop>

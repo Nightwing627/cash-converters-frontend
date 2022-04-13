@@ -13,7 +13,7 @@ import BannerBG from '../../../../assets/images/banner.png'
 import VideoSrc from '../../../../assets/video.mp4'
 
 
-export default function Store() {
+export default function Store({width}) {
     const [showVideo, setVideoValue] = useState(false);
    
     const handleShowVideo = (e) => {
@@ -29,7 +29,7 @@ export default function Store() {
                     <p>store roles at</p>
                     <p className="mt-2 font-weight-bold">cash converters </p>
                 </div>
-                <SubMenuBar tag="store" /> 
+                <SubMenuBar tag="store" width={width} /> 
             </section>
             <section className="section-card">
                 <TextCard data={WorkingStore} />

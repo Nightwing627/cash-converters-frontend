@@ -13,7 +13,7 @@ import Testimonial from '../Testimonial'
 import { WorkingLoan, LoanRoles, LoanBenefits } from '../joinus.data'
 import VideoSrc from '../../../../assets/video.mp4'
 
-export default function Loan() {
+export default function Loan({width}) {
     const [showVideo, setVideoValue] = useState(false);
    
     const handleShowVideo = (e) => {
@@ -29,7 +29,7 @@ export default function Loan() {
                     <p>loan centre roles at</p>
                     <p className="mt-2 font-weight-bold">cash converters </p>
                 </div>
-                <SubMenuBar tag="loan" /> 
+                <SubMenuBar tag="loan" width={width} /> 
             </section>
             <section className="section-card">
                 <TextCard data={WorkingLoan} />

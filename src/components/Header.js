@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
-import Logo from '../assets/images/logo.png'
+import { ReactSVG } from 'react-svg'
+import Logo from '../assets/images/logo.svg'
+import MobileLogo from './MobileLogo'
 import StickyMenu from './StickyMenu'
 import Navigation from './Navigation'
 
-export default function Header({action}) {
+export default function Header({action, width}) {
     useEffect(() => {
         StickyMenu()
     }, [])
@@ -14,8 +16,11 @@ export default function Header({action}) {
                 <div className="row align-items-center">
                     <div className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
                         <div className="cash-logo-box">
-                            <a href="/">
-                                <img src={Logo} alt="cash converter" />
+                            <a className="pc-header-logo" href="https://www.cashconverters.co.nz/">
+                                <ReactSVG src={Logo}/>
+                            </a>
+                            <a className="mobile-header-logo" href="https://www.cashconverters.co.nz/">
+                                <MobileLogo />
                             </a>
                         </div>
                     </div>
@@ -24,7 +29,7 @@ export default function Header({action}) {
                             <Navigation />
                         </div>
                     </div>
-                    <div className="col-lg-2  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
+                    <div className="col-lg-2 col-md-7 col-sm-6 col-6 order-2 order-sm-3">
                         <div className="cash-btn-box text-right">
                             <div
                                 onClick={(e) => action(e)}

@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from 'react-slick'
-import { FaChevronCircleLeft, FaChevronCircleRight, FaChild } from "react-icons/fa";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
@@ -36,12 +36,12 @@ export default function Testimonial() {
         <div className="testimonial-area">
             <Slider {...settings}>
                 {Testimonials.map((item) => (
-                    <div className="testimonial-item align-items-center" key={item.id}>
-                        <div className="row d-flex">
-                            <div className="col-3 col-xs-12 testimonial-image">
+                    <div className="testimonial-item " key={item.id}>
+                        <div className="row d-flex align-items-center">
+                            <div className="col-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 testimonial-image">
                                 <img src={item.imgSrc} alt={item.role} />
                             </div>
-                            <div className="col-9 col-xs-12 testimonial-text">
+                            <div className="col-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 testimonial-text">
                                 <p className="feedback-employee font-weight-bold">{item.employee}</p>
                                 <p className="feedback-role">{item.role}</p>
                                 <p className="company-name">Cash Converters Henderson</p>

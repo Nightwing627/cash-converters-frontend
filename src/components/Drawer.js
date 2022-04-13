@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import { ReactSVG } from 'react-svg';
 import { Link } from 'react-router-dom'
-import Logo from  '../assets/images/logo.png'
 
 export default function Drawer({ drawer, action }) {
     const [itemSize, setSize] = useState('0px');
@@ -31,9 +31,7 @@ export default function Drawer({ drawer, action }) {
                                         <i className="fa fa-times"></i>
                                     </a>
                                 </div>
-                                <div className="offcanvas-brand text-center mb-40">
-                                    <img src={Logo} alt="cash converters" />
-                                </div>
+                                
                                 <div id="menu" className="text-left">
                                     <ul className="offcanvas_main_menu">
                                         <li

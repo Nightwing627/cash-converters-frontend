@@ -5,7 +5,6 @@ import SubMenuBar from '../SubMenuBar';
 import { FaPlayCircle } from 'react-icons/fa'
 
 import TextCard from '../TextCard'
-import OptionCard from '../OptionCard';
 import ServiceCard from '../ServiceCard'
 import Vacancy from '../Vacancy'
 import Testimonial from '../Testimonial'
@@ -13,7 +12,7 @@ import Testimonial from '../Testimonial'
 import { WorkingHeadOffice, HeadOfficeRoles } from '../joinus.data'
 import VideoSrc from '../../../../assets/video.mp4'
 
-export default function HeadOffice() {
+export default function HeadOffice({width}) {
     const [showVideo, setVideoValue] = useState(false);
    
     const handleShowVideo = (e) => {
@@ -29,7 +28,7 @@ export default function HeadOffice() {
                     <p>head office roles at</p>
                     <p className="mt-2 font-weight-bold">cash converters </p>
                 </div>
-                <SubMenuBar tag="headoffice" /> 
+                <SubMenuBar tag="headoffice" width={width} /> 
             </section>
             <section className="section-card pb-60">
                 <TextCard data={WorkingHeadOffice} />

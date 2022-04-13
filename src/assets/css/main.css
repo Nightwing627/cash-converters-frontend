@@ -450,8 +450,8 @@ p {
     10.cash FOOTER css 
 ===========================*/
 .cash-footer-area {
-  /* background:#4f545c; */
-  background:white;
+  background: #3e4551!important;
+  color: white;
 }
 .cash-footer-area .social-bar {
   background: #0288d1;
@@ -481,9 +481,14 @@ p {
   background: #4dabdf;
   color: #fff;
 }
+.cash-footer-area h6,
+.cash-footer-area p,
+.cash-footer-area a {
+  color: white;
+}
 
 .footer-navigation-area {
-  background-color: #4f545c;
+  background-color: #3e4551;
   padding-bottom: 30px;
 }
 .footer-navigation {
@@ -536,10 +541,10 @@ p {
     text-align: center;
   }
 }
-.copyright-text p {
-  color: #a7a7ad;
-}
 
+.copyright-text p {
+  color: #ffffff99;
+}
 .cash-error-area {
   padding-top: 250px;
 }
