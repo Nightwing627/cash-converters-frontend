@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cash-converters-frontend/static/css/main.4225bb80.css",
-    "main.js": "/cash-converters-frontend/static/js/main.9462417c.js",
+    "main.js": "/cash-converters-frontend/static/js/main.9f1f54a5.js",
     "static/js/787.99c94f77.chunk.js": "/cash-converters-frontend/static/js/787.99c94f77.chunk.js",
     "static/media/video.mp4": "/cash-converters-frontend/static/media/video.ffae7ec1f3e4471a9aad.mp4",
     "static/media/banner-headoffice.png": "/cash-converters-frontend/static/media/banner-headoffice.2c1b1cc38ef6728a4f8b.png",
@@ -80,11 +80,11 @@
     "static/media/logo-part-1.svg": "/cash-converters-frontend/static/media/logo-part-1.da3bf4437f87fc23f169a382821fd471.svg",
     "static/media/logo-part-3.svg": "/cash-converters-frontend/static/media/logo-part-3.0842cc0b9c71088e1503dc8a5273b3f2.svg",
     "main.4225bb80.css.map": "/cash-converters-frontend/static/css/main.4225bb80.css.map",
-    "main.9462417c.js.map": "/cash-converters-frontend/static/js/main.9462417c.js.map",
+    "main.9f1f54a5.js.map": "/cash-converters-frontend/static/js/main.9f1f54a5.js.map",
     "787.99c94f77.chunk.js.map": "/cash-converters-frontend/static/js/787.99c94f77.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4225bb80.css",
-    "static/js/main.9462417c.js"
+    "static/js/main.9f1f54a5.js"
   ]
 }
