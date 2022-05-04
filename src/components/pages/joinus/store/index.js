@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
 import { FaPlayCircle } from 'react-icons/fa'
+import { NavHashLink as NavLink } from 'react-router-hash-link'
 
 import SubMenuBar from '../SubMenuBar'
 import TextCard from '../TextCard'
@@ -22,7 +23,7 @@ export default function Store({width}) {
     };
 
     return (
-        <div className="container">
+        <div className="main-content">
             <section id="banner">
                 <img className="banner-image" src={BannerBG} alt="banner"/>
                 <div className="banner-title-area">
@@ -31,13 +32,27 @@ export default function Store({width}) {
                 </div>
                 <SubMenuBar tag="store" width={width} /> 
             </section>
-            <section className="section-card">
-                <TextCard data={WorkingStore} />
-            </section>
-            <div className="row video-area">
-                <div className="col-12 video-header">
-                    <p>View Store Vacancies</p>
+
+            <div className="container">
+                <section className="section-card pt-5">
+                    <TextCard data={WorkingStore} />
+                </section>
+            </div>
+            
+            <div className="col-12 vacancy-header mt-5">
+                <div className="text-card">
+                    <NavLink
+                        to='#vacancies'
+                        scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
+                    >
+                        <h4 className="span-all-columns h4-responsive mb-0">View Store Vacancies</h4>
+                    </NavLink>
+                    
+                    
                 </div>
+            </div>
+            
+            <div className="row video-area py-5">
                 <section className="section-card video-card">
                     <div className="col-12 video-section">
                         {!showVideo ? 
@@ -57,40 +72,59 @@ export default function Store({width}) {
                    </div>
                 </section>
             </div>
-            <section className="section-card service-section bg-white">
-                <p className="service-out-title">Roles in a Cash Converters Store</p>
-                <ServiceCard 
-                    data={StoreRoles.TeamMember} 
-                    dir='right' 
-                    btnName="Express my interest" />
-                <ServiceCard 
-                    data={StoreRoles.LoanSpecial} 
-                    dir='left' 
-                    btnName="Express my interest" />
-                <ServiceCard 
-                    data={StoreRoles.Inventory} 
-                    dir='right' 
-                    btnName="Express my interest" />
-                <ServiceCard 
-                    data={StoreRoles.Assistant} 
-                    dir='left' 
-                    btnName="Express my interest" />
-                <ServiceCard 
-                    data={StoreRoles.Store} 
-                    dir='right' 
-                    btnName="Express my interest" />
-                <ServiceCard 
-                    data={StoreRoles.Partner} 
-                    dir='left' 
-                    btnName="Express my interest" />
-            </section>
-            <section className="section-card bg-section pb-5">
-                <Vacancy />
-            </section>
-            <section className="section-card pb-150">
-                <p className="service-out-title">What's it like to work at Cash Converters?</p>
-                <Testimonial />
-            </section>
+            
+            <div className='service-section py-5 bg-white'>
+                <section className="section-card container">
+                    <h3 className="span-all-columns h3-responsive main-text mb-5">
+                        Roles in a Cash Converters Store</h3>
+                    <ServiceCard 
+                        data={StoreRoles.TeamMember} 
+                        dir='right' 
+                        btnName="Express my interest"
+                        modal={true} />
+                    <ServiceCard 
+                        data={StoreRoles.LoanSpecial} 
+                        dir='left' 
+                        btnName="Express my interest"
+                        modal={true} />
+                    <ServiceCard 
+                        data={StoreRoles.Inventory} 
+                        dir='right' 
+                        btnName="Express my interest"
+                        modal={true} />
+                    <ServiceCard 
+                        data={StoreRoles.Assistant} 
+                        dir='left' 
+                        btnName="Express my interest"
+                        modal={true} />
+                    <ServiceCard 
+                        data={StoreRoles.Store} 
+                        dir='right' 
+                        btnName="Express my interest"
+                        modal={true} />
+                    <ServiceCard 
+                        data={StoreRoles.Partner} 
+                        dir='left' 
+                        btnName="Express my interest"
+                        modal={true} />
+                </section>
+            </div>
+            
+            <div id="vacancies" className='service-section bg-section pb-0'>
+                <section className="section-card container py-5">
+                    <Vacancy />
+                </section>
+            </div>
+            
+            <div className='container py-5'>
+                <section className="section-card">
+                <h3 className="span-all-columns h3-responsive main-text mb-5">
+                    What's it like to work at Cash Converters?</h3>
+                    
+                    <Testimonial />
+                </section>
+            </div>
+            
         </div>
     )
 }

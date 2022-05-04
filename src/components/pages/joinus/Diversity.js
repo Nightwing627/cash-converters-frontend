@@ -28,10 +28,10 @@ export default function Diversity({ data }) {
     }
 
     return (
-        <div className="diversity-item" key={data.id}>
-            <p className="diversity-title">{data.title}</p>
+        <div className="diversity-item text-card pt-5" key={data.id}>
+            <h2 className="span-all-columns h2-responsive">{data.title}</h2>
             <div 
-                className="diversity-summary"
+                className="text-card-content pb-4"
                 dangerouslySetInnerHTML={{__html: data.summary}}></div>
             <div className="diversity-photos">
                 <Gallery photos={photos} direction={"column"} columns={columns} onClick={openLightBox} />

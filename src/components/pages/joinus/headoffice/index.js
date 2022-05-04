@@ -21,7 +21,7 @@ export default function HeadOffice({width}) {
     };
 
     return (    
-        <div className="container">
+        <div className="main-content">
             <section id="banner">
                 <img className="banner-image" src={BannerBG} alt="banner"/>
                 <div className="banner-title-area">
@@ -30,16 +30,20 @@ export default function HeadOffice({width}) {
                 </div>
                 <SubMenuBar tag="headoffice" width={width} /> 
             </section>
-            <section className="section-card pb-60">
+
+            <div className="container">
+                <section className="section-card pt-5">
                 <TextCard data={WorkingHeadOffice} />
-            </section>
-            <div className="row video-area">
+                </section>
+            </div>
+
+            <div className="row video-area py-5">
                 <section className="section-card video-card">
                     <div className="col-12 video-section">
                         {!showVideo ? 
                             <div className='video-thumbnail'>
                                 <FaPlayCircle onClick={handleShowVideo}/>
-                                <p>Current Loan Centre Video</p>
+                                <p>Haines ‘True Story’ Video</p>
                             </div>
                         : 
                         <ReactPlayer 
@@ -53,34 +57,47 @@ export default function HeadOffice({width}) {
                    </div>
                 </section>
             </div>
-            <section className="section-card service-section bg-white">
-                <p className="service-out-title">Roles in the Cash Converters Store Head Office</p>
-                <ServiceCard 
-                    data={HeadOfficeRoles.ITDev} 
-                    dir='right' />
-                <ServiceCard 
-                    data={HeadOfficeRoles.ITAdmin} 
-                    dir='left' />
-                <ServiceCard 
-                    data={HeadOfficeRoles.Accounting} 
-                    dir='right' />
-                <ServiceCard 
-                    data={HeadOfficeRoles.HR} 
-                    dir='left' />
-                <ServiceCard 
-                    data={HeadOfficeRoles.Marketing} 
-                    dir='right' />
-                <ServiceCard 
-                    data={HeadOfficeRoles.Support} 
-                    dir='left' />
-            </section>
-            <section className="section-card bg-section pb-5">
-                <Vacancy />
-            </section>
-            <section className="section-card pb-150">
-                <p className="service-out-title">What's it like to work at Cash Converters?</p>
-                <Testimonial />
-            </section>
+            
+            <div className='service-section py-5 bg-white'>
+                <section className="section-card container">
+                    <h3 className="span-all-columns h3-responsive main-text mb-5">
+                        Roles in the Cash Converters Store Head Office
+                    </h3>
+                    <ServiceCard 
+                        data={HeadOfficeRoles.ITDev} 
+                        dir='right' />
+                    <ServiceCard 
+                        data={HeadOfficeRoles.ITAdmin} 
+                        dir='left' />
+                    <ServiceCard 
+                        data={HeadOfficeRoles.Accounting} 
+                        dir='right' />
+                    <ServiceCard 
+                        data={HeadOfficeRoles.HR} 
+                        dir='left' />
+                    <ServiceCard 
+                        data={HeadOfficeRoles.Marketing} 
+                        dir='right' />
+                    <ServiceCard 
+                        data={HeadOfficeRoles.Support} 
+                        dir='left' />
+                </section>
+            </div>
+            
+            <div className='service-section bg-section pb-0'>
+                <section className="section-card container py-5">
+                    <Vacancy />
+                </section>
+            </div>
+
+            <div className='container py-5'>
+                <section className="section-card">
+                <h3 className="span-all-columns h3-responsive main-text mb-5">
+                    What's it like to work at Cash Converters?</h3>
+                    
+                    <Testimonial />
+                </section>
+            </div>
         </div>
         
     )

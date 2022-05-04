@@ -22,19 +22,66 @@
     1. COMMON css 
 ===========================*/
 @font-face {
-  font-family: 'CoHeadline';
+  font-family: 'ccheadline';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-display: auto;
-  src: url("../fonts/co/Co Headline Corp.ttf") format("truetype");
+  src: url("../fonts/co/ccheadline.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'ccheadlinebold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src: url("../fonts/co/ccheadlinebold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'CoHeadlineBold';
+  font-family: 'ccheadlinelight';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-display: auto;
-  src: url("../fonts/co/Co Headline Corp Bold.ttf") format("truetype");
+  src: url("../fonts/co/ccheadlinelight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'ccheadlineregular';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src: url("../fonts/co/ccheadlineregular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'cctext';
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+  src: url("../fonts/co/cctext.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'cctextbold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src: url("../fonts/co/cctextbold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'cctextlight';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/co/cctextlight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'cctextregular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/co/cctextregular.ttf") format("truetype");
 }
 
 @font-face {
@@ -46,7 +93,7 @@
 }
 
 body {
-  font-family: "CoHeadline";
+  font-family: "ccheadline";
   font-weight: normal;
   font-style: normal;
   color: #505056;
@@ -92,10 +139,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: ccheadline, "Roboto", sans-serif;
   font-weight: 900;
   color: #0e1133;
-  margin: 0px;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -456,37 +503,28 @@ p {
 .cash-footer-area .social-bar {
   background: #0288d1;
   justify-content: right;
-  padding: 20px 10%;
+  padding: 18px 10%;
 }
-.cash-footer-area .social ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.cash-footer-area .social ul li {
+.cash-footer-area .social-bar svg {
+  overflow: visible;
+  width: 0.875em;
   display: inline-block;
-  padding: 0 5px;
-}
-.cash-footer-area .social ul li a {
-  height: 36px;
-  width: 36px;
-  text-align: center;
-  background: #fff;
-  color: #0288d1;
-  border-radius: 6px;
-  line-height: 36px;
-  margin-right: 5px;
-}
-.cash-footer-area .social ul li a:hover {
-  background: #4dabdf;
-  color: #fff;
+  font-size: inherit;
+  height: 1em;
+  vertical-align: -0.125em;
 }
 .cash-footer-area h6,
 .cash-footer-area p,
 .cash-footer-area a {
   color: white;
 }
-
+.cash-footer-area h6 {
+  font-family: ccheadlinebold;
+}
+.cash-footer-area a,
+.cash-footer-area p {
+  font-family: cctextlight;
+}
 .footer-navigation-area {
   background-color: #3e4551;
   padding-bottom: 30px;

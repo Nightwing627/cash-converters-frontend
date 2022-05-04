@@ -56,89 +56,89 @@ import HeadSupport from '../../../assets/images/headoffice-roles/Support.jpg'
 
 export const TrueStory = {
     title: "True Story",
-    content: `Cash Converters is not only a great place to shop… it’s also a great place to work!</br>
-    We value diversity and authenticity. Where you come from doesn’t matter to us. It’s what truly drives you and what can’t be seen on a CV that really
-    matters… we will teach you the rest.</br>
-    We’re a successful global brand with over 700 stores in more than 16 countries. At our very heart we are all about uncovering hidden gems by
-    nurturing talent and supporting each other to succeed.</br>
-    With 22 stores across New Zealand, a Loan Centre in Wellington, a Support office in Auckland and a significant digital presence – we have exciting
-    career opportunities available for you – whether you’re looking for a fulfilling new job, or an opportunity-rich career.`
+    content: `<p class="mb-2">Cash Converters is not only a great place to shop… it’s also a great place to work!</p>
+    <p class="mb-2">We value diversity and authenticity. Where you come from doesn’t matter to us. It’s what truly drives you and what can’t be seen on a CV that really
+    matters… we will teach you the rest.</p>
+    <p class="mb-2">We’re a successful global brand with over 700 stores in more than 16 countries. At our very heart we are all about uncovering hidden gems by
+    nurturing talent and supporting each other to succeed.</p>
+    <p class="mb-2">With 22 stores across New Zealand, a Loan Centre in Wellington, a Support office in Auckland and a significant digital presence – we have exciting
+    career opportunities available for you – whether you’re looking for a fulfilling new job, or an opportunity-rich career.</p>`
 }
 
 export const Carrers = {
     title: 'Carrers at Cash Converters',
-    content: `We have a great range of roles in our business, perfect for many different backgrounds and skillsets.</br>
-    We provide on the job coaching and training, career progression opportunities, professional development and most importantly a friendly, down to
-    earth and like-minded team.</br>
-    Whether you work in one of our stores, our Loan Centre or our Support Office, you’ll be part of a kiwi business that’s been providing Kiwis with
+    content: `<p class="mb-2">We have a great range of roles in our business, perfect for many different backgrounds and skillsets.</p>
+    <p class="mb-2">We provide on the job coaching and training, career progression opportunities, professional development and most importantly a friendly, down to
+    earth and like-minded team.</p>
+    <p class="mb-2">Whether you work in one of our stores, our Loan Centre or our Support Office, you’ll be part of a kiwi business that’s been providing Kiwis with
     financial solutions for over 25 years. The New Zealand business is part of the wider international Cash Converters group which has been operating
-    for nearly 40 years.</br>
-    The key to unlocking your true potential comes down to your own determination to succeed. We are dedicated to promoting from within, so if you
-    show us you want it – then we’ll help you become the best you can be!`
+    for nearly 40 years.</p>
+    <p class="mb-2">The key to unlocking your true potential comes down to your own determination to succeed. We are dedicated to promoting from within, so if you
+    show us you want it – then we’ll help you become the best you can be!</p>`
 }
 
 export const CarrerServices = {
     Store: {
         title: 'Stores',
-        summary: `Within our 22 stores across New Zealand, you will find a
+        summary: `<p class="mb-2">Within our 22 stores across New Zealand, you will find a
         diverse range of people with sparkling personalities and
         a passion for customer service. We encourage diversity,
         respect individuality, and encourage and support our
-        people as they develop valuable skills and experience.</br>
-        Whether you are an experienced manager looking for the
+        people as they develop valuable skills and experience.</p>
+        <p class="mb-2">Whether you are an experienced manager looking for the
         next step in your career or an ambitious individual looking
         to get your break into the world of retail and finance, we
         have a range of fantastic career opportunities in-store and
-        are always on the lookout for the next Cashies superstar!`,
+        are always on the lookout for the next Cashies superstar!</p>`,
         imgSrc: StoreService,
         link: '/joinus/store',
     },
     LoanCentre: {
         title: 'Loan Centre',
-        summary: `Our Loan Centre is a friendly, fun and vibrant office. Our
+        summary: `<p class="mb-2">Our Loan Centre is a friendly, fun and vibrant office. Our
         knowledgeable finance specialists are responsible for
         helping thousands of Kiwi’s access credit when they need
         it. Demonstrating high levels of enthusiasm and respect,
         the team connect directly with our customers, explaining a
         range of loan options in a straightforward and professional
-        manner.</br>
-        The Loan Centre is always looking for positive and
+        manner.</p>
+        <p class="mb-2">The Loan Centre is always looking for positive and
         motivated people to welcome to their family. Whether
         you have extensive finance experience or are seeking an
         opportunity to gain skills in the finance sector and/or
         develop your customer service skills, we are confident that
-        we’ll have a role to suit.`,
+        we’ll have a role to suit.</p>`,
         imgSrc: LaonService,
         link: '/joinus/loancenter',
     },
     HeadOffice: {
         title: 'Head Office',
-        summary: `Our Head Office team are friendly and down to earth,
+        summary: `<p class="mb-2">Our Head Office team are friendly and down to earth,
         with a broad range of skills, experience and backgrounds.
         Each talented individual plays their part in the design,
         implementation and management of business strategies
-        and initiatives.</br>
-        Beautifully located by the harbour in Auckland next to
+        and initiatives.</p>
+        <p class="mb-2">Beautifully located by the harbour in Auckland next to
         ferry, bus and train terminals, it is home to our treasury,
         financial reporting, legal, IT development and support,
-        human resources, digital, marketing and business support.</br>
-        We are big believers in collaboration and connection and
+        human resources, digital, marketing and business support.</p>
+        <p class="mb-2">We are big believers in collaboration and connection and
         are always on the lookout for likeminded individuals to join
-        our team`,
+        our team</p>`,
         imgSrc: HeadService,
         link: '/joinus/headoffice',
     },
     Diversity: {
-        summary: `Cash Converters is all about diversity and inclusion.
+        summary: `<p class="mb-2">Cash Converters is all about diversity and inclusion.
         When you walk into one of our stores, our Loan Centre
         or Head Office you’ll see people from all walks of life,
         working together as a family to help our customers get the
-        solutions they need.</br>
-        We support and empower our people to be themselves and
+        solutions they need.</p>
+        <p class="mb-2">We support and empower our people to be themselves and
         to embrace their individuality, which is what makes them
-        amazing and what we love as a brand.</br>
-        Cash Converters is a supporter of events that embrace
-        diversity and inclusion.`,
+        amazing and what we love as a brand.</p>
+        <p class="mb-2">Cash Converters is a supporter of events that embrace
+        diversity and inclusion.</p>`,
         imgSrc: DiversityService,
     }
 }
@@ -362,6 +362,46 @@ export const Faqs = {
         }
     ]
 }
+
+export const Accordions = [
+    {
+        title: 'Do you offer part-time or casual positions?',
+        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+        the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.`
+    },{
+        title: 'Can I work for Cash Converters whilst on a visa?',
+        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+        the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.`
+    },{
+        title: 'If successful in gaining a position, will I get career progression?',
+        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+        the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.`
+    },{
+        title: 'I want to work in finance and have no experience, can I still apply?',
+        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+        the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.`
+    },{
+        title: 'Does Cash Converters just sell second-hand goods?',
+        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+        the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.`
+    },{
+        title: 'Is Cash Converters a New Zealand business?',
+        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+        the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.`
+    },{
+        title: 'Is the Loan Centre based in a store?',
+        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+        the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.`
+    }
+]
+
 
 export const WorkingStore = {
     title: "Working in a Cash Converters Store",

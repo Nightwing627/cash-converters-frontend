@@ -4,9 +4,6 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
-.mt-5 {
-	margin-top: 5px !important;
-}
 .mt-10 {
 	margin-top: 10px !important;
 }
@@ -126,9 +123,6 @@ a {
 }
 /*-- Margin Bottom --*/
 
-.mb-5 {
-	margin-bottom: 5px !important;
-}
 .mb-10 {
 	margin-bottom: 10px !important;
 }
@@ -247,9 +241,7 @@ a {
 	margin-bottom: 200px !important;
 }
 /*-- margin left --*/
-.ml-5 {
-	margin-left: 5px !important;
-}
+
 .ml-10 {
 	margin-left: 10px !important;
 }
@@ -368,9 +360,7 @@ a {
 	margin-left: 200px !important;
 }
 /*-- margin right --*/
-.mr-5 {
-	margin-right: 5px !important;
-}
+
 .mr-10 {
 	margin-right: 10px !important;
 }
@@ -492,9 +482,6 @@ a {
 
 /*-- Padding Top --*/
 
-.pt-5 {
-	padding-top: 5px !important;
-}
 .pt-10 {
 	padding-top: 10px !important;
 }
@@ -614,9 +601,6 @@ a {
 }
 /*-- Padding Bottom --*/
 
-.pb-5 {
-	padding-bottom: 5px !important;
-}
 .pb-10 {
 	padding-bottom: 10px !important;
 }
@@ -737,12 +721,6 @@ a {
 
 /*-- Padding left --*/
 
-.pl-0 {
-	padding-left: 0px !important;
-}
-.pl-5 {
-	padding-left: 5px !important;
-}
 .pl-10 {
 	padding-left: 10px !important;
 }
@@ -814,12 +792,6 @@ a {
 }
 /*-- Padding right --*/
 
-.pr-0 {
-	padding-right: 0px !important;
-}
-.pr-5 {
-	padding-right: 5px !important;
-}
 .pr-10 {
 	padding-right: 10px !important;
 }
@@ -934,4 +906,348 @@ a {
 }
 [data-overlay="9"]::before {
 	opacity: 0.9;
+}
+
+/* Floating Labels */
+
+[dir=rtl] .floating-label > input + label,
+[dir=rtl] .floating-label > textarea + label {
+  right: 0;
+  left: auto !important;
+}
+[dir=rtl] .floating-label > input:not([placeholder]):not([value]) + label,
+[dir=rtl] .floating-label > textarea:not([placeholder]):empty + label, [dir=rtl] .floating-label > input[placeholder]:not(:placeholder-shown) + label,
+[dir=rtl] .floating-label > textarea[placeholder]:not(:placeholder-shown) + label, [dir=rtl] .floating-label > input:-webkit-autofill + label,
+[dir=rtl] .floating-label > textarea:-webkit-autofill + label, [dir=rtl] .floating-label > input:focus + label,
+[dir=rtl] .floating-label > textarea:focus + label, [dir=rtl] .floating-label > select + label {
+  right: 0.5rem;
+  left: auto !important;
+}
+
+.floating-label {
+  position: relative;
+}
+.floating-label > select + label,
+.floating-label > select + label.label-sm {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.7875rem;
+  font-size: 0.875rem;
+}
+.floating-label > select + label.label-md {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.9rem;
+  font-size: 1rem;
+}
+.floating-label > select + label.label-lg {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -1.125rem;
+  font-size: 1.25rem;
+}
+.floating-label > select:disabled + label, .floating-label > select[readonly] + label {
+  background-color: #e9ecef;
+}
+.floating-label > input + label,
+.floating-label > textarea + label {
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  color: #6c757d;
+  pointer-events: none;
+  font-size: 1rem;
+  padding: calc(0.375rem + 1px) calc(0.75rem + 1px);
+}
+.floating-label > input.form-control-sm + label,
+.floating-label > textarea.form-control-sm + label {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  color: #6c757d;
+  pointer-events: none;
+  font-size: 0.875rem;
+  padding: calc(0.25rem + 1px) calc(0.5rem + 1px);
+}
+.floating-label > input.form-control-lg + label,
+.floating-label > textarea.form-control-lg + label {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  color: #6c757d;
+  pointer-events: none;
+  font-size: 1.25rem;
+  padding: calc(0.5rem + 1px) calc(1rem + 1px);
+}
+.floating-label > input::placeholder,
+.floating-label > textarea::placeholder {
+  color: transparent;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.floating-label > label + input::placeholder,
+.floating-label > label + textarea::placeholder {
+  color: #6c757d;
+}
+.floating-label > input:focus::placeholder,
+.floating-label > textarea:focus::placeholder {
+  color: #6c757d;
+}
+.floating-label > input:focus + label,
+.floating-label > input:focus + label.label-sm,
+.floating-label > textarea:focus + label,
+.floating-label > textarea:focus + label.label-sm {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.7875rem;
+  font-size: 0.875rem;
+}
+.floating-label > input:focus + label.label-md,
+.floating-label > textarea:focus + label.label-md {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.9rem;
+  font-size: 1rem;
+}
+.floating-label > input:focus + label.label-lg,
+.floating-label > textarea:focus + label.label-lg {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -1.125rem;
+  font-size: 1.25rem;
+}
+.floating-label > input:focus[readonly] + label,
+.floating-label > textarea:focus[readonly] + label {
+  background-color: #e9ecef;
+}
+
+.floating-label > input:-webkit-autofill + label,
+.floating-label > input:-webkit-autofill + label.label-sm,
+.floating-label > textarea:-webkit-autofill + label,
+.floating-label > textarea:-webkit-autofill + label.label-sm {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.7875rem;
+  font-size: 0.875rem;
+}
+.floating-label > input:-webkit-autofill + label.label-md,
+.floating-label > textarea:-webkit-autofill + label.label-md {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.9rem;
+  font-size: 1rem;
+}
+.floating-label > input:-webkit-autofill + label.label-lg,
+.floating-label > textarea:-webkit-autofill + label.label-lg {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -1.125rem;
+  font-size: 1.25rem;
+}
+
+.floating-label > input[placeholder]:not(:placeholder-shown) + label,
+.floating-label > input[placeholder]:not(:placeholder-shown) + label.label-sm,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label.label-sm {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.7875rem;
+  font-size: 0.875rem;
+}
+.floating-label > input[placeholder]:not(:placeholder-shown) + label.label-md,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label.label-md {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.9rem;
+  font-size: 1rem;
+}
+.floating-label > input[placeholder]:not(:placeholder-shown) + label.label-lg,
+.floating-label > textarea[placeholder]:not(:placeholder-shown) + label.label-lg {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -1.125rem;
+  font-size: 1.25rem;
+}
+.floating-label > input[placeholder]:not(:placeholder-shown):disabled + label, .floating-label > input[placeholder]:not(:placeholder-shown)[readonly] + label,
+.floating-label > textarea[placeholder]:not(:placeholder-shown):disabled + label,
+.floating-label > textarea[placeholder]:not(:placeholder-shown)[readonly] + label {
+  background-color: #e9ecef;
+}
+.floating-label > input:not([placeholder]):not([value]) + label,
+.floating-label > input:not([placeholder]):not([value]) + label.label-sm,
+.floating-label > textarea:not([placeholder]):empty + label,
+.floating-label > textarea:not([placeholder]):empty + label.label-sm {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.7875rem;
+  font-size: 0.875rem;
+}
+.floating-label > input:not([placeholder]):not([value]) + label.label-md,
+.floating-label > textarea:not([placeholder]):empty + label.label-md {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -0.9rem;
+  font-size: 1rem;
+}
+.floating-label > input:not([placeholder]):not([value]) + label.label-lg,
+.floating-label > textarea:not([placeholder]):empty + label.label-lg {
+  position: absolute;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0.5rem;
+  padding: 0 0.3rem;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  top: -1.125rem;
+  font-size: 1.25rem;
+}
+.floating-label > input:not([placeholder]):not([value]):disabled + label, .floating-label > input:not([placeholder]):not([value])[readonly] + label,
+.floating-label > textarea:not([placeholder]):empty:disabled + label,
+.floating-label > textarea:not([placeholder]):empty[readonly] + label {
+  background-color: #e9ecef;
 }
