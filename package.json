@@ -1,6 +1,6 @@
 {
   "name": "cash-convert",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://webdev0627.github.io/cash-converters-frontend",
   "private": true,
   "dependencies": {

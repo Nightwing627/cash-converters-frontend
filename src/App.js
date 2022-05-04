@@ -49,7 +49,7 @@ function App() {
         </div>
       )}
       <div className={`cash-visible ${!loading ? 'active' : ''}`}>
-        <Router>
+        <Router basename="/cash-converters-frontend">
           <ScrollToTop>
               <Drawer drawer={drawer} action={drawerAction.toggle}></Drawer>
               <Header action={drawerAction.toggle} width={width} />
