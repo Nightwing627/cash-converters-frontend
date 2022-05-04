@@ -1,4 +1,4 @@
-import react, {useState } from "react";
+import React, {useState } from "react";
 
 export default function OutlinedInput({ name, label, placeholder, onBlur, errors}) {
     const [focused, setFocused] = useState(false);
@@ -18,7 +18,7 @@ export default function OutlinedInput({ name, label, placeholder, onBlur, errors
                         type='text'
                         autoCorrect="off"
                         autoCapitalize="off"
-                        aria-autocomplete="false"
+                        ariaAutocomplete="false"
                         autoComplete="false"
                         spellCheck="false"
                         className='InputBase-input OutlinedInput-input'

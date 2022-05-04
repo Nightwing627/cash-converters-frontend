@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Drawer({ drawer, action }) {
-    const [itemSize, setSize] = useState('0px');
-    const [item, setItem] = useState('home');
+    // const [itemSize, setSize] = useState('0px');
+    // const [item, setItem] = useState('home');
     
     const handler = (e, value) => {
         e.preventDefault();
-        const getItems = document.querySelectorAll(`#${value} li`).length;
-        if (getItems > 0) {
-            setSize(`${43 * getItems}px`);
-            setItem(value);
-        }
+        // const getItems = document.querySelectorAll(`#${value} li`).length;
+        // if (getItems > 0) {
+        //     setSize(`${43 * getItems}px`);
+        //     setItem(value);
+        // }
     }
 
     return (
@@ -26,9 +26,9 @@ export default function Drawer({ drawer, action }) {
                         <div className="col-12">
                             <div className={`offcanvas_menu_wrapper ${drawer ? 'active' : ''}`}>
                                 <div className="canvas_close">
-                                    <a href="#" onClick={(e) => action(e)}>
+                                    <Link to="/" onClick={(e) => action(e)}>
                                         <i className="fa fa-times"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                                 
                                 <div id="menu" className="text-left">
