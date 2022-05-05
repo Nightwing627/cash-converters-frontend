@@ -697,6 +697,7 @@
   .video-card {
     padding: 0;
   }
+ 
 }
 @media (min-width: 400px) {
   .banner-title-area {
@@ -705,6 +706,7 @@
   .banner-title-area p {
     font-size: 5vw;
   }
+  
 }
 @media only screen and (min-width: 577px) and (max-width: 767px) {
   .banner-title-area {
@@ -1007,6 +1009,12 @@ h6 {
     0 5px 11px 0 rgb(0 0 0 / 18%),
     0 4px 15px 0 rgb(0 0 0 / 15%);
   min-height: fit-content;
+}
+@media (max-width: 576px) {
+  .express-modal {
+    width: 370px;
+    left: 48%;
+  }
 }
 .modal-overlay {
   position: fixed;
