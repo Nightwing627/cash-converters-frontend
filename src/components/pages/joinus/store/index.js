@@ -42,17 +42,15 @@ export default function Store({width}) {
             <div className="col-12 vacancy-header mt-5">
                 <div className="text-card">
                     <NavLink
-                        to='#vacancies'
+                        to="/joinus/store#vacancy_section"
                         scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
                     >
                         <h4 className="span-all-columns h4-responsive mb-0">View Store Vacancies</h4>
                     </NavLink>
-                    
-                    
                 </div>
             </div>
             
-            <div className="row video-area py-5">
+            <div className="service-section video-area py-5">
                 <section className="section-card video-card">
                     <div className="col-12 video-section">
                         {!showVideo ? 
@@ -110,7 +108,7 @@ export default function Store({width}) {
                 </section>
             </div>
             
-            <div id="vacancies" className='service-section bg-section pb-0'>
+            <div id="vacancy_section" className='service-section bg-section pb-0'>
                 <section className="section-card container py-5">
                     <Vacancy />
                 </section>

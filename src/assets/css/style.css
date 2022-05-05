@@ -183,7 +183,7 @@
 }
 .cash-header-sub-menu {
   position: relative;
-  padding: 20px;
+  padding: 20px 0;
 }
 .cash-header-sub-menu > ul {
   list-style: none;
@@ -528,7 +528,6 @@
 
 .video-area {
   background-color: #f0eeed;
-
 }
 
 .video-card {
@@ -644,9 +643,19 @@
 }
 
 /***** Responsive ******/
+
 @media (max-width: 576px) {
+  .cash-header-sub-menu {
+    padding: 12px 0;
+  }
+  .cash-header-sub-menu ul {
+    padding: 0;
+  }
   .banner-title-area {
-    top: 34vw;
+    top: 29vw;
+  }
+  .banner-title-area p {
+    font-size: 6vw;
   }
   .order-xs-1 {
     -ms-flex-order: 1;
@@ -679,27 +688,36 @@
   }
   .video-thumbnail {
     height: 50vw;
-    padding-top: 6vh;
-    font-size: 70px;
+    padding-top: 7vw;
+    font-size: 85px;
   }
   .video-thumbnail p {
-    font-size: 16px;
+    font-size: 22px;
+  }
+  .video-card {
+    padding: 0;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 767px) {
   .banner-title-area {
-    top: 31vw;
+    top: 29vw;
+  }
+  .banner-title-area p {
+    font-size: 6vw;
   }
   .option-area .option-item {
     padding: 0% !important;
   }
   .video-thumbnail {
     height: 50vw;
-    padding-top: 8vh;
+    padding-top: 11vw;
     font-size: 90px;
   }
   .video-thumbnail p {
     font-size: 24px;
+  }
+  .video-card {
+    padding: 0;
   }
   /* .service-card .service-title,
   .service-out-title {
@@ -710,7 +728,10 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner-title-area {
-    top: 28vw;
+    top: 29vw;
+  }
+  .banner-title-area p {
+    font-size: 6vw;
   }
   .video-thumbnail {
     height: 50vw;
@@ -845,7 +866,14 @@
       max-width: 1280px
   }
 }
-
+@media (min-width: 400px) {
+  .banner-title-area {
+    top: 33vw;
+  }
+  .banner-title-area p {
+    font-size: 5vw;
+  }
+}
 h1,
 h2,
 h3,

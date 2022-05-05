@@ -304,7 +304,7 @@ p {
   z-index: 9998;
   opacity: 0;
   visibility: hidden;
-  cursor: crosshair;
+  cursor: default;
   background: #232323;
   top: 0;
   transition: all linear 0.3s;
@@ -315,37 +315,50 @@ p {
 }
 
 .offcanvas_menu {
-  display: none;
+  opacity: 0;
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .offcanvas_menu {
-    display: block;
+    opacity: 1;
   }
 }
 @media (max-width: 767px) {
   .offcanvas_menu {
-    display: block;
+    opacity: 1;
   }
 }
 
 .offcanvas_menu_wrapper {
-  width: 290px;
+  width: max-content;
   position: fixed;
   background: #fff;
   z-index: 9999;
   top: 0;
   height: 100%;
-  transition: 0.5s;
+  color: #616161;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: 
+    0px 8px 10px -5px rgb(0 0 0 / 20%), 
+    0px 16px 24px 2px rgb(0 0 0 / 14%), 
+    0px 6px 30px 5px rgb(0 0 0 / 12%);
   left: 0;
   margin-left: -300px;
-  padding: 50px 15px 30px;
+  padding: 50px 0px 8px 0px;
   overflow-y: visible;
 }
 .offcanvas_menu_wrapper.active {
-  margin-left: 0;
+  margin-left: auto;
+  right: 0;
 }
 .offcanvas_main_menu li {
+  width: 100%;
+  padding: 8px 16px;
   position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
 }
 .offcanvas_main_menu li:last-child {
   margin: 0;
@@ -355,24 +368,29 @@ p {
   right: 0;
 }
 .offcanvas_main_menu li a {
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: capitalize;
   display: block;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ededed;
-  color: #222;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  padding: 6px 8px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: none;
+  font-family: cctextregular;
+}
+.offcanvas_main_menu li.active a {
+  color: rgb(237, 176, 17);;
 }
 .offcanvas_main_menu li a:hover {
-  color: #2b70fa;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.04);
 }
-
 .offcanvas_footer {
   padding-bottom: 50px;
   text-align: center;

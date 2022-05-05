@@ -37,7 +37,7 @@ export default function HeadOffice({width}) {
                 </section>
             </div>
 
-            <div className="row video-area py-5">
+            <div className="row video-area py-5 mt-5">
                 <section className="section-card video-card">
                     <div className="col-12 video-section">
                         {!showVideo ? 

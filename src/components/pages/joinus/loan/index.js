@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
+import { NavHashLink as NavLink } from 'react-router-hash-link'
 import BannerBG from '../../../../assets/images/banner-loan.png'
 import SubMenuBar from '../SubMenuBar';
 import { FaPlayCircle } from 'react-icons/fa'
@@ -48,8 +49,14 @@ export default function Loan({width}) {
 
             <div className="col-12 vacancy-header mt-5">
                 <div className="half-width centered-content text-card">
-                    <h4 className="span-all-columns h4-responsive mb-0">View Store Vacancies</h4>
+                    <NavLink
+                        to="/joinus/store#vacancy_section"
+                        scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
+                    >
+                        <h4 className="span-all-columns h4-responsive mb-0">View Store Vacancies</h4>
+                    </NavLink>
                 </div>
+                
             </div>
             
             <div className="row video-area py-5">
@@ -80,11 +87,13 @@ export default function Loan({width}) {
                     <ServiceCard 
                         data={LoanRoles.Specialist} 
                         dir='right' 
-                        btnName="Express my interest" />
-                    <ServiceCard 
+                        btnName="Express my interest"
+                        modal={true} />
+                    <ServiceCard
                         data={LoanRoles.Supervisor} 
-                        dir='left' 
-                        btnName="Express my interest" />
+                        dir='left'
+                        btnName="Express my interest"
+                        modal={true} />
                     <ServiceCard 
                         data={LoanRoles.TeamLeader} 
                         dir='right' />
@@ -97,7 +106,7 @@ export default function Loan({width}) {
                 </section>
             </div>
             
-            <div className='service-section bg-section pb-0'>
+            <div id="vacancy_section" className='service-section bg-section pb-0'>
                 <section className="section-card container py-5">
                     <Vacancy />
                 </section>
