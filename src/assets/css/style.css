@@ -698,6 +698,14 @@
     padding: 0;
   }
 }
+@media (min-width: 400px) {
+  .banner-title-area {
+    top: 33vw;
+  }
+  .banner-title-area p {
+    font-size: 5vw;
+  }
+}
 @media only screen and (min-width: 577px) and (max-width: 767px) {
   .banner-title-area {
     top: 29vw;
@@ -728,7 +736,7 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner-title-area {
-    top: 29vw;
+    top: 26vw;
   }
   .banner-title-area p {
     font-size: 6vw;
@@ -866,14 +874,7 @@
       max-width: 1280px
   }
 }
-@media (min-width: 400px) {
-  .banner-title-area {
-    top: 33vw;
-  }
-  .banner-title-area p {
-    font-size: 5vw;
-  }
-}
+
 h1,
 h2,
 h3,
