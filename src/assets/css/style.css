@@ -293,6 +293,9 @@
 .text-card .text-card-content {
   font-family: cctextlight;
 }
+.text-card .text-card-content p {
+  margin-bottom: 0.75rem;
+}
 
 .option-area {
   padding-bottom: 60px;
@@ -600,7 +603,8 @@
   font-weight: 500;
   font-family: cctext;
 }
-.feedback-content {
+.testimonial-text .feedback-content p {
+  color: #505056;
   font-family: cctextlight;
 }
 .testimonial-area .testimonial-next-arrow {
@@ -680,7 +684,7 @@
     padding: 0 17%;
   }
   .option2-area .option-item .img-div {
-    width: 50%;
+    width: 90%;
     margin: auto;
   }
   .option2-area .option-item p:last-of-type {

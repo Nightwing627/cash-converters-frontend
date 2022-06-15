@@ -1,11 +1,10 @@
 import React from "react";
 import Slider from 'react-slick'
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import ReactMarkdown from 'react-markdown'
 
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-
-import { Testimonials } from './joinus.data'
 
 function CustomerArrow(props) {
     const {className, arrow, onClick} = props;
@@ -21,7 +20,7 @@ function CustomerArrow(props) {
     )
 }
 
-export default function Testimonial() {
+export default function Testimonial({data }) {
     
     const settings = {
         dots: false,
@@ -35,19 +34,20 @@ export default function Testimonial() {
     return (
         <div className="testimonial-area">
             <Slider {...settings}>
-                {Testimonials.map((item) => (
-                    <div className="testimonial-item " key={item.id}>
+                {data.map((item, index) => (
+                    <div className="testimonial-item " key={index}>
                         <div className="row d-flex align-items-center">
                             <div className="col-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 testimonial-image">
-                                <img src={item.imgSrc} alt={item.role} />
+                                <img src={item.image.url} alt={item.role} />
                             </div>
                             <div className="col-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 testimonial-text">
-                                <p className="feedback-employee font-weight-bold">{item.employee}</p>
+                                <p className="feedback-employee font-weight-bold">{item.name}</p>
                                 <p className="feedback-role">{item.role}</p>
-                                <p className="company-name">Cash Converters Henderson</p>
-                                <div
-                                    className="feedback-content mt-2" 
-                                    dangerouslySetInnerHTML={{__html: item.content}}></div>
+                                <p className="company-name">{item.writer}</p>
+                                <ReactMarkdown 
+                                    className="feedback-content mt-2"
+                                    children={item.content}
+                                />
                             </div>
                         </div>                
                     </div>

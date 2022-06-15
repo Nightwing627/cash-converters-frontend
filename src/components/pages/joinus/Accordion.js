@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown'
 
-export default function Accordion({data}) {
+export default function Accordion({ data }) {
     const [accordions, setAccordions] = useState([]);
 
     const initData = () => {
@@ -8,8 +9,8 @@ export default function Accordion({data}) {
             console.log('init accordions');
             data.forEach((i) => {
                 accordions.push({
-                    title: i.title,
-                    content: i.content,
+                    title: i.question,
+                    content: i.answer,
                     open: false,
                     preOpen: false,
                 });
@@ -33,6 +34,7 @@ export default function Accordion({data}) {
             } else {
                 item.open = false;
             }
+            return item;
         })
 
         setAccordions(newAccordion)
@@ -54,11 +56,12 @@ export default function Accordion({data}) {
                     </div>
                     <div 
                         className={i.open ? 'content content-open' : 'content'}>
-                        <div className={i.open ?
+                        <ReactMarkdown 
+                            className={i.open ?
                             'content-text content-text-open'
-                            : 'content-text'}>
-                            {i.content}
-                        </div>
+                            : 'content-text'}
+                            children={i.content}
+                        />
                     </div>
                 </div>
             ))}

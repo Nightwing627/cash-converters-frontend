@@ -65,8 +65,8 @@ export const TrueStory = {
     career opportunities available for you – whether you’re looking for a fulfilling new job, or an opportunity-rich career.</p>`
 }
 
-export const Carrers = {
-    title: 'Carrers at Cash Converters',
+export const Careers = {
+    title: 'Careers at Cash Converters',
     content: `<p class="mb-2">We have a great range of roles in our business, perfect for many different backgrounds and skillsets.</p>
     <p class="mb-2">We provide on the job coaching and training, career progression opportunities, professional development and most importantly a friendly, down to
     earth and like-minded team.</p>
@@ -77,7 +77,7 @@ export const Carrers = {
     show us you want it – then we’ll help you become the best you can be!</p>`
 }
 
-export const CarrerServices = {
+export const CareerServices = {
     Store: {
         title: 'Stores',
         summary: `<p class="mb-2">Within our 22 stores across New Zealand, you will find a

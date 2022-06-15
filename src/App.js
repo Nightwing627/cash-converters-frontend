@@ -54,9 +54,9 @@ function App() {
               <Drawer drawer={drawer} action={drawerAction.toggle}></Drawer>
               <Header action={drawerAction.toggle} width={width} />
               <Routes>
-                <Route eact path="/" element={<Career width={width} />} />
+                <Route exact path="/" element={<Career width={width} />} />
                 <Route path="/joinus" element={<Career width={width} />} />
-                <Route path="/joinus/carrer" element={<Career width={width} />} />
+                <Route path="/joinus/career" element={<Career width={width} />} />
                 <Route path="/joinus/store" element={<Store width={width} />} />
                 <Route path="/joinus/loancenter" element={<LoanCenter width={width} />} />
                 <Route path="/joinus/headoffice" element={<HeadOffice width={width} />} />

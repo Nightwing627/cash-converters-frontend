@@ -18,9 +18,9 @@ export default function OutlinedInput({ name, label, placeholder, onBlur, errors
                         type='text'
                         autoCorrect="off"
                         autoCapitalize="off"
-                        ariaAutocomplete="false"
-                        autoComplete="false"
-                        spellCheck="false"
+                        ariaAutocomplete={false}
+                        autoComplete={false}
+                        spellCheck={false}
                         className='InputBase-input OutlinedInput-input'
                         placeholder={placeholder}
                         onBlur={e => { 

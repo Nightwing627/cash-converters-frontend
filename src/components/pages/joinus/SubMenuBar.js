@@ -8,7 +8,7 @@ export default function SubMenuBar({ tag, width }) {
                 <div className="cash-header-sub-menu">
                     <ul className="col-12">
                         <li className={`col-3 ${tag === 'career' ? 'active' : ''}`}>
-                            <Link to="/joinus/carrer">{width < 1200 ? 'careers' : 'careers at cash converters'}</Link>
+                            <Link to="/joinus/career">{width < 1200 ? 'careers' : 'careers at cash converters'}</Link>
                         </li>
                         <li className={`col-3 ${tag === 'store' ? 'active' : ''}`}>
                             <Link to="/joinus/store">stores</Link>
