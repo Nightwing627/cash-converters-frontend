@@ -57,40 +57,9 @@ export const query_getOrganizations = `
   }
 }`;
 
-// {
-//   diversityCollection(limit: 1) {
-//     items {
-//       title
-//       description
-//       image {
-//         url
-//       }
-//       buttonName
-//       direction
-//       holidaysCollection {
-//         items {
-//           title
-//           description
-//           imagesCollection {
-//             items {
-//               image {
-//                 url
-//               }
-//               with
-//               height
-//             }
-//           }
-//           toggleShow
-//         }
-//       }
-//       toggleShow
-//     }
-//   }
-// }
-
 export const query_getDiversity = `
 {
-  diversityCollection {
+  diversityCollection(limit: 1) {
     items {
       title
       description
@@ -100,6 +69,11 @@ export const query_getDiversity = `
       buttonName
       direction
       toggleShow
+      holidays: holidaysCollection {
+        items {
+          title
+        }
+      }
     }
   }
 }`;
@@ -127,3 +101,25 @@ export const query_getFaq = `
     }
   }
 }`;
+
+export const query_getHolidayByTitle = (name) => `
+{
+  holiday: holidayCollection(where: {title: "${name}"}, limit: 1) {
+    items {
+      title
+      description
+      images: imagesCollection {
+        items {
+          name
+          image {
+            url
+          }
+          width
+          height
+        }
+      }
+      toggleShow
+    }
+  }
+}
+`;

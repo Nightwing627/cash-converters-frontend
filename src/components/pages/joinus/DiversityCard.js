@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import ReactMarkdown from 'react-markdown';
-// import Diversity from "./Diversity";
+import Diversity from "./Diversity";
 
 export default function DiversityCard({ 
-  data: {title, description, image, buttonName, direction, /*holidaysCollection,*/ toggleShow} }) {
+  data: {title, description, image, buttonName, direction, holidays, toggleShow} }) {
     
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
         <>
             {
@@ -42,15 +42,14 @@ export default function DiversityCard({
                         </div>
                     </div>
 
-                    {/* { (isOpen && holidaysCollection && holidaysCollection.items) 
-                      &&
+                    {
+                      (isOpen && holidays && holidays.items) &&
                       <div className="col-12 diversity-section">
-                        {holidaysCollection.items.map((item, index) => (
-                          <Diversity data={item} key={index}/>
+                        {holidays.items.map((item, index) => (
+                          <Diversity title={item.title} key={index}/>
                         ))}
                       </div>
-                    } */}
-
+                    }
                   </div>
                 </section>
                 
