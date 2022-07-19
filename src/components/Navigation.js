@@ -6,16 +6,10 @@ export default function Navigation() {
         <>
             <ul>
                 <li
-                    id="home"
-                    className="menu-item-has-children"
-                >
-                    <Link to="/">Home</Link>
-                </li>
-                <li
                     id="borrow"
                     className="menu-item-has-children"
                 >
-                    <Link to="/">Borrow From Us</Link>
+                    <Link to="/">Personal Loans</Link>
                 </li>
                 <li
                     id="pawn"
@@ -39,7 +33,7 @@ export default function Navigation() {
                     id="stores"
                     className="menu-item-has-children"
                 >
-                    <Link to="/">Stores</Link>
+                    <Link to="/">Our Stores</Link>
                 </li>
                 <li
                     id="about"
@@ -57,7 +51,7 @@ export default function Navigation() {
                     id="contact"
                     className="menu-item-has-children"
                 >
-                    <Link to="/">Contact</Link>
+                    <Link to="/">Contact Us</Link>
                 </li>
             </ul>
         </>

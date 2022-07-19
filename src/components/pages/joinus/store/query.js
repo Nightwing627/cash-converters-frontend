@@ -24,6 +24,18 @@ export const query_getTextCards = `
 }
 `;
 
+export const query_getBlueButton = `
+{
+  buttons: blueButtonCollection(where: {page_contains_all: ["store"]}, limit:1) {
+    items {
+      text
+      toggleShow
+      page
+    }
+  }
+}
+`;
+
 export const query_getVideo = `
 {
   videoCollection(where: {page: "store"}, limit: 1) {

@@ -24,16 +24,34 @@ export const query_getTextCards = `
 }
 `;
 
-export const query_getServices = `
+export const query_getBenefit = `
 {
-  servicesCollection(where: {page: "loancenter"}, order: order_ASC) {
+	benefit: loanCentreBenefitsCollection (limit: 1) {
     items {
-      name
-      description
-      image {
-        url
-      }
+    	title
       toggleShow
+      data: benefitsCollection {
+        items {
+          name
+          description
+          image {
+            url
+          }
+          toggleShow
+        }
+      }
+  	}
+  }
+}
+`;
+
+export const query_getBlueButton = `
+{
+  buttons: blueButtonCollection(where: {page_contains_all: ["loan centre"]}, limit:1) {
+    items {
+      text
+      toggleShow
+      page
     }
   }
 }

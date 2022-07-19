@@ -24,53 +24,53 @@ export default function Drawer({ drawer, action }) {
                                 <div id="menu" className="text-center">
                                     <ul className="offcanvas_main_menu">
                                         <li
-                                            onClick={(e) => handler(e, 'home')}
-                                            id="home"
+                                            onClick={(e) => handler(e, 'personalLoan')}
+                                            id="personalLoan"
                                         >
-                                            <Link to="/">Personl Loans</Link>
+                                            <Link to="https://cashconverters.co.nz/borrow/">Personl Loans</Link>
                                         </li>
                                         <li
-                                            onClick={(e) => handler(e, 'borrow')}
-                                            id="borrow"
+                                            onClick={(e) => handler(e, 'Pawn')}
+                                            id="Pawn"
                                         >
-                                            <Link to="/">Pawn With Us</Link>
+                                            <Link to="https://cashconverters.co.nz/pawns/ ">Pawn With Us</Link>
                                         </li>
                                         <li
-                                            onClick={(e) => handler(e, 'pawn')}
-                                            id="pawn"
+                                            onClick={(e) => handler(e, 'Sell')}
+                                            id="Sell"
                                         >
-                                            <Link to="/">Sell To Us</Link>
+                                            <Link to="https://cashconverters.co.nz/sell/ ">Sell To Us</Link>
                                         </li>
                                         <li
-                                            onClick={(e) => handler(e, 'sell')}
-                                            id="sell"
+                                            onClick={(e) => handler(e, 'Buy')}
+                                            id="Buy"
                                         >
-                                            <Link to="/">Buy From Us</Link>
+                                            <Link to="https://cashconverters.co.nz/buy/">Buy From Us</Link>
                                         </li>
                                         <li
-                                            onClick={(e) => handler(e, 'buy')}
-                                            id="buy"
+                                            onClick={(e) => handler(e, 'Stores')}
+                                            id="Stores"
                                         >
-                                            <Link to="/">Our Stores</Link>
-                                        </li>
-                                        <li
-                                            onClick={(e) => handler(e, 'stores')}
-                                            id="stores"
-                                        >
-                                            <Link to="/">About Us</Link>
+                                            <Link to="https://cashconverters.co.nz/stores/">Our Stores</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'about')}
                                             id="about"
-                                            className="active"
                                         >
-                                            <Link to="/">Join Us</Link>
+                                            <Link to="/">About Us</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'join')}
                                             id="join"
+                                            className="active"
                                         >
-                                            <Link to="/">Contact Us</Link>
+                                            <Link to="https://cashconverters.co.nz/about-us/">Join Us</Link>
+                                        </li>
+                                        <li
+                                            onClick={(e) => handler(e, 'contact')}
+                                            id="contact"
+                                        >
+                                            <Link to="https://cashconverters.co.nz/contact-us/">Contact Us</Link>
                                         </li>
                                     </ul>
                                 </div>

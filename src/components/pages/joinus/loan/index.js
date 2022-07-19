@@ -24,7 +24,8 @@ export default function Loan({width}) {
 
     const [bannerData, setBannerData] = useState(null);
     const [textCards, setTextCards] = useState(null);
-    const [services, setServices] = useState(null);
+    const [benefit, setBenefit] = useState(null);
+    const [blueButton, setBlueButton] = useState(null);
     const [videoData, setVideoData] = useState(null);
     const [roleData, setRoleData] = useState(null);
     const [testimonials, setTestimonials] = useState(null);
@@ -38,8 +39,12 @@ export default function Loan({width}) {
             data.textCardCollection.items && setTextCards(data.textCardCollection.items);
         });
 
-        fetchContent(Query.query_getServices).then((data) => {
-            data.servicesCollection.items && setServices(data.servicesCollection.items);
+        fetchContent(Query.query_getBenefit).then((data) => {
+            data.benefit.items[0] && setBenefit(data.benefit.items[0]);
+        });
+
+        fetchContent(Query.query_getBlueButton).then((data) => {
+            data.buttons.items[0] && setBlueButton(data.buttons.items[0]);
         });
 
         fetchContent(Query.query_getVideo).then((data) => {
@@ -77,31 +82,39 @@ export default function Loan({width}) {
                     ))       
                 }
                 {
-                    services &&
-                    <div className="row justify-content-between mt-30 option2-area pb-30">
-                        {services.map((item, index) => (
-                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12 benefit-item" key={index}>
-                            <OptionCard2 data={item} />
+                    (benefit && benefit.toggleShow) &&
+                    <>
+                        {
+                            benefit.title &&
+                            <h3 className="span-all-columns h3-responsive service-out-title mt-30">{benefit.title}</h3>
+                        }
+                        <div className="row justify-content-between mt-30 option2-area pb-30">
+                            {benefit.data.items.map((item, index) => (
+                                <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12 benefit-item" key={index}>
+                                    <OptionCard2 data={item} />
+                                </div>
+                            ))}
                         </div>
-                        ))}
-                    </div>
+                    </>  
                 }
                     <p className="normal-text">So, what are you waiting for? Check out our vacancies below and become one of us.</p>
                 </section>    
             </div>
 
-            <div className="col-12 vacancy-header mt-5">
-                <div className="half-width centered-content text-card">
-                    <NavLink
-                        to="/joinus/loancenter#vacancy_section"
-                        scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
-                    >
-                        <h4 className="span-all-columns h4-responsive mb-0">View Store Vacancies</h4>
-                    </NavLink>
+            {
+                (blueButton && blueButton.toggleShow) &&
+                <div className="col-12 vacancy-header mt-5">
+                    <div className="half-width centered-content text-card">
+                        <NavLink
+                            to="#vacancy_section"
+                            scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
+                        >
+                            <h4 className="span-all-columns h4-responsive mb-0">{blueButton.text}</h4>
+                        </NavLink>
+                    </div>
                 </div>
-                
-            </div>
-            
+            }
+
             {
                 (videoData && videoData.toggleShow) &&
                 <div className="service-section video-area py-5">

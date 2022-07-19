@@ -24,6 +24,18 @@ export const query_getTextCards = `
 }
 `;
 
+export const query_getBlueButton = `
+{
+  buttons: blueButtonCollection(where: {page_contains_all: ["head office"]}, limit:1) {
+    items {
+      text
+      toggleShow
+      page
+    }
+  }
+}
+`;
+
 export const query_getServices = `
 {
   servicesCollection(where: {page: "headoffice"}, order: order_ASC) {

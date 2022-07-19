@@ -14,10 +14,10 @@ export default function SubMenuBar({ tag, width }) {
                             <Link to="/joinus/store">stores</Link>
                         </li>
                         <li className={`col-3 ${tag === 'loan' ? 'active' : ''}`}>
-                            <Link to="/joinus/loancenter">{width < 1200 ? 'loan' : 'loan center'}</Link>
+                            <Link to="/joinus/loancenter">{width < 1200 ? 'Loan Centre' : 'Loan Centre'}</Link>
                         </li>
                         <li className={`col-3 ${tag === 'headoffice' ? 'active' : ''}`}>
-                            <Link to="/joinus/headoffice">{width < 1200 ? 'head' : 'head office'}</Link>
+                            <Link to="/joinus/headoffice">{width < 1200 ? 'Support Office' : 'Support Office'}</Link>
                         </li>
                     </ul>
                 </div>

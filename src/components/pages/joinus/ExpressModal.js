@@ -1,6 +1,7 @@
 import React, {useRef, useState, useEffect} from "react";
 import Modal from 'react-modal'
-import OutlinedInput from '../joinus/OutlinedInput'
+import OutlinedInput from '../joinus/OutlinedInput';
+import SendMessage, { /* UseEmail */ } from "../../../utils/useEmial";
 
 export default function ExpressModal({ open, toggle}) {
     const buttonRef = useRef();
@@ -56,8 +57,24 @@ export default function ExpressModal({ open, toggle}) {
         }
     }
 
-    
+    const handleAction = (event) => {
+        event.preventDefault();
 
+        let enableSubmit = false;
+        
+        errors && Object.keys(errors).map(key => 
+            enableSubmit = errors[key] ? false : true
+        );
+        
+        enableSubmit && SendMessage(fields);
+    }
+    // const sendExpress = () => {
+    //     sendEmail({
+    //         example_user: "thomasminato04@gmail.com",
+    //         example_data: new Date().toISOString(),
+    //     })
+    // }
+    //hr@cashconverters.co.nz
     return (
         <Modal
             isOpen={open}
@@ -76,7 +93,7 @@ export default function ExpressModal({ open, toggle}) {
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form name="expressForm" autoComplete="chrome-off"  noValidate>
+                    <form name="expressForm" autoComplete={"chrome-off"} noValidate>
                         <div className="modal-body">
                             <div className="mb-3 form-item">
                                 <OutlinedInput 
@@ -118,6 +135,7 @@ export default function ExpressModal({ open, toggle}) {
 
                             }}
                             className="btn blue-gradient btn-rounded btn-block ripple-parent"
+                            onClick={handleAction}
                         >
                             Send Message
                             {isRippling ? (

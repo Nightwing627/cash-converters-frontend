@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import SubMenuBar from '../SubMenuBar';
 import { FaPlayCircle } from 'react-icons/fa'
-
+import { NavHashLink as NavLink } from 'react-router-hash-link'
 import TextCard from '../TextCard'
 import ServiceCard from '../ServiceCard'
 import Vacancy from '../Vacancy'
@@ -22,6 +22,7 @@ export default function HeadOffice({width}) {
 
     const [bannerData, setBannerData] = useState(null);
     const [textCards, setTextCards] = useState(null);
+    const [blueButton, setBlueButton] = useState(null);
     const [videoData, setVideoData] = useState(null);
     const [roleData, setRoleData] = useState(null);
     const [testimonials, setTestimonials] = useState(null);
@@ -33,6 +34,10 @@ export default function HeadOffice({width}) {
 
         fetchContent(Query.query_getTextCards).then((data) => {
             data.textCardCollection.items && setTextCards(data.textCardCollection.items);
+        });
+
+        fetchContent(Query.query_getBlueButton).then((data) => {
+            data.buttons.items[0] && setBlueButton(data.buttons.items[0]);
         });
 
         fetchContent(Query.query_getVideo).then((data) => {
@@ -70,6 +75,20 @@ export default function HeadOffice({width}) {
                         </section>
                     </div>
                 ))       
+            }
+
+            {
+                (blueButton && blueButton.toggleShow) &&
+                <div className="col-12 vacancy-header">
+                    <div className="half-width centered-content text-card">
+                        <NavLink
+                            to="#vacancy_section"
+                            scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
+                        >
+                            <h4 className="span-all-columns h4-responsive mb-0">{blueButton.text}</h4>
+                        </NavLink>
+                    </div>
+                </div>
             }
 
             {
@@ -117,7 +136,7 @@ export default function HeadOffice({width}) {
                 </div>
             }
             
-            <div className='service-section bg-section pb-0'>
+            <div id="vacancy_section" className='service-section bg-section pb-0'>
                 <section className="section-card container py-5">
                     <Vacancy />
                 </section>

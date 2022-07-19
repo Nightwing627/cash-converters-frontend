@@ -44,7 +44,7 @@ export default function Diversity({ title }) {
                 setPhotos(photoData);
             }
         });
-    }, []);
+    }, [title]);
 
     const openLightBox = useCallback((evt, {photo, index}) => {
         setCurrentImg(index)

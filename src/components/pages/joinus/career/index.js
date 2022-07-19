@@ -17,7 +17,7 @@ export default function Career({width}) {
     const [keyPoints, setKeyPoints] = useState(null);
     const [organizations, setOrganizations] = useState(null);
     const [diversity, setDiversity] = useState(null);
-    const [services, setServices] = useState(null);
+    const [benefit, setBenefit] = useState(null);
     const [faq, setFaq] = useState(null);
     
     useEffect(() => {
@@ -32,7 +32,7 @@ export default function Career({width}) {
         fetchContent(Query.query_getKeyPoints).then((data) => {
             data.keyPointsCollection.items && setKeyPoints(data.keyPointsCollection.items);
         });
-
+    
         fetchContent(Query.query_getOrganizations).then((data) => {
             data.roleCollection.items && setOrganizations(data.roleCollection.items);
         });
@@ -40,9 +40,9 @@ export default function Career({width}) {
         fetchContent(Query.query_getDiversity).then((data) => {
             data.diversityCollection.items && setDiversity(data.diversityCollection.items);
         });
-        
-        fetchContent(Query.query_getCareerServices).then((data) => {
-            data.servicesCollection.items && setServices(data.servicesCollection.items);
+
+        fetchContent(Query.query_getBenefit).then((data) => {
+            data.benefit.items[0] && setBenefit(data.benefit.items[0]);
         });
 
         fetchContent(Query.query_getFaq).then((data) => {
@@ -110,15 +110,15 @@ export default function Career({width}) {
                 ))
                 
             }
-            
+
             {
-                services &&
+                (benefit && benefit.toggleShow) &&
                 <div className="service-section py-5">
                     <section className="section-card container">
                         <h3 className="span-all-columns h3-responsive service-out-title">
-                                We're all about our people and here are a few ways we look after you</h3>
+                                {benefit.title}</h3>
                         <div className="row justify-content-between option2-area">
-                            {services.map((item, index) => (
+                            {benefit.data.items.map((item, index) => (
                                 <div className="col-lg-2 col-md-4 col-sm-6 col-xs-12 mt-30" key={index}>
                                     <OptionCard2 data={item} />
                                 </div>

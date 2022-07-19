@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import Diversity from "./Diversity";
 
 export default function DiversityCard({ 
-  data: {title, description, image, buttonName, direction, holidays, toggleShow} }) {
+  data: {title, description, image, buttonName, toggleButton, direction, holidays, toggleShow} }) {
     
     const [isOpen, setIsOpen] = useState(false);
 
@@ -26,12 +26,15 @@ export default function DiversityCard({
                                 className="text-card-content mt-3"
                                 children={description}
                             />
-
-                          <div className="text-center pt-4">
-                            <span className="service-btn" onClick={(e) => setIsOpen(!isOpen)} >
-                              {buttonName}   
-                            </span>
-                          </div>
+                          {
+                            toggleButton &&
+                            <div className="text-center pt-4">
+                              <span className="service-btn" onClick={(e) => setIsOpen(!isOpen)} >
+                                {buttonName}   
+                              </span>
+                            </div>
+                          }
+                          
                       </div>
                       
                       <div 

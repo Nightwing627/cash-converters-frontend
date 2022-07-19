@@ -23,6 +23,7 @@ export default function Store({width}) {
 
     const [bannerData, setBannerData] = useState(null);
     const [textCards, setTextCards] = useState(null);
+    const [blueButton, setBlueButton] = useState(null);
     const [videoData, setVideoData] = useState(null);
     const [roleData, setRoleData] = useState(null);
     const [testimonials, setTestimonials] = useState(null);
@@ -34,6 +35,10 @@ export default function Store({width}) {
 
         fetchContent(Query.query_getTextCards).then((data) => {
             data.textCardCollection.items && setTextCards(data.textCardCollection.items);
+        });
+
+        fetchContent(Query.query_getBlueButton).then((data) => {
+            data.buttons.items[0] && setBlueButton(data.buttons.items[0]);
         });
 
         fetchContent(Query.query_getVideo).then((data) => {
@@ -72,18 +77,21 @@ export default function Store({width}) {
                     </div>
                 ))       
             }
-            
-            <div className="col-12 vacancy-header mt-5">
-                <div className="text-card">
-                    <NavLink
-                        to="/joinus/store#vacancy_section"
-                        scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
-                    >
-                        <h4 className="span-all-columns h4-responsive mb-0">View Store Vacancies</h4>
-                    </NavLink>
-                </div>
-            </div>
 
+            {
+                (blueButton && blueButton.toggleShow) &&
+                <div className="col-12 vacancy-header mt-5">
+                    <div className="text-card">
+                        <NavLink
+                            to="#vacancy_section"
+                            scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
+                        >
+                            <h4 className="span-all-columns h4-responsive mb-0">{blueButton.text}</h4>
+                        </NavLink>
+                    </div>
+                </div>
+            }
+            
             {
                 (videoData && videoData.toggleShow) &&
                 <div className="service-section video-area py-5">

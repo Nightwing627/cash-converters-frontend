@@ -67,6 +67,7 @@ export const query_getDiversity = `
         url
       }
       buttonName
+      toggleButton
       direction
       toggleShow
       holidays: holidaysCollection {
@@ -78,19 +79,26 @@ export const query_getDiversity = `
   }
 }`;
 
-export const query_getCareerServices = `
+export const query_getBenefit = `
 {
-  servicesCollection(where: {page: "career"}, order: order_ASC) {
+	benefit: careerBenefitCollection (limit: 1) {
     items {
-      name
-      description
-      image {
-        url
-      }
+    	title
       toggleShow
-    }
+      data: benefitsCollection {
+        items {
+          name
+          description
+          image {
+            url
+          }
+          toggleShow
+        }
+      }
+  	}
   }
-}`;
+}
+`;
 
 export const query_getFaq = `
 {
