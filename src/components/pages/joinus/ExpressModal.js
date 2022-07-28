@@ -10,8 +10,10 @@ export default function ExpressModal({ open, toggle}) {
     const [errors, setErrors] = useState({})
     const [fields, setFields] = useState({})
 
+    // ^\w+([\.-_]?\w+)*@\w+([\.-_]?\w+)*(\.\w{2,3})+$  -updated version
+    // ^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$   - first version
     let emailRegExp = RegExp(
-        /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
+        /^\w+([\.-_]?\w+)*@\w+([\.-_]?\w+)*(\.\w{2,3})+$/
     )
     let phoneRegExp = RegExp(
         /^02[0-2,6-9](\s|-|)\d{3,4}(\s|-|)\d{3,4}$/
