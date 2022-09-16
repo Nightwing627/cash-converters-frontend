@@ -131,3 +131,15 @@ export const query_getHolidayByTitle = (name) => `
   }
 }
 `;
+
+export const query_getRoleTitle = `
+{
+  roleTitles: roleTitleCollection(where: {page: "career"}, limit: 1) {
+    items {
+      title
+      page
+      toggleShow
+    }
+  }
+}
+`;

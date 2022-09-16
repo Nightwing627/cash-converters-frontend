@@ -15,6 +15,7 @@ export default function Career({width}) {
     const [bannerData, setBannerData] = useState(null);
     const [textCards, setTextCards] = useState(null);
     const [keyPoints, setKeyPoints] = useState(null);
+    const [roleTitle, setRoleTitle] = useState(null)
     const [organizations, setOrganizations] = useState(null);
     const [diversity, setDiversity] = useState(null);
     const [benefit, setBenefit] = useState(null);
@@ -32,7 +33,11 @@ export default function Career({width}) {
         fetchContent(Query.query_getKeyPoints).then((data) => {
             data.keyPointsCollection.items && setKeyPoints(data.keyPointsCollection.items);
         });
-    
+        
+        fetchContent(Query.query_getRoleTitle).then((data) => {
+            data.roleTitles.items[0] && setRoleTitle(data.roleTitles.items[0])
+        })
+
         fetchContent(Query.query_getOrganizations).then((data) => {
             data.roleCollection.items && setOrganizations(data.roleCollection.items);
         });
@@ -87,11 +92,16 @@ export default function Career({width}) {
                     </section>
                 </div>
             }
-            
+
             {
                 organizations && 
                 <div className="service-section py-5">
                     <section className="container section-card">
+                        {(roleTitle && roleTitle.title && roleTitle.toggleShow) &&
+                            <h3 className="span-all-columns h3-responsive main-text mb-5">
+                                {roleTitle.title}
+                            </h3>
+                        }
                         {organizations.map((organ, index) =>(
                             <ServiceCard 
                                 data={organ} 

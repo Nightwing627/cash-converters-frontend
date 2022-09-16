@@ -86,3 +86,15 @@ export const query_getTestimonials = `
   }
 }
 `;
+
+export const query_getRoleTitle = `
+{
+  roleTitles: roleTitleCollection(where: {page: "store"}, limit: 1) {
+    items {
+      title
+      page
+      toggleShow
+    }
+  }
+}
+`;

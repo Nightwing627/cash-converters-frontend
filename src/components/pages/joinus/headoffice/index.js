@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import ReactPlayer from 'react-player'
 import SubMenuBar from '../SubMenuBar';
 import { FaPlayCircle } from 'react-icons/fa'
-import { NavHashLink as NavLink } from 'react-router-hash-link'
 import TextCard from '../TextCard'
 import ServiceCard from '../ServiceCard'
 import Vacancy from '../Vacancy'
@@ -20,9 +19,19 @@ export default function HeadOffice({width}) {
         setVideoValue(!showVideo);
     };
 
+    const vacancySection = useRef(null)
+
+    const scrollToVacancy = () => {
+      window.scrollTo({
+        top: vacancySection.current.offsetTop,
+        behavior: 'smooth',
+      })
+    }
+
     const [bannerData, setBannerData] = useState(null);
     const [textCards, setTextCards] = useState(null);
     const [blueButton, setBlueButton] = useState(null);
+    const [roleTitle, setRoleTitle] = useState(null);
     const [videoData, setVideoData] = useState(null);
     const [roleData, setRoleData] = useState(null);
     const [testimonials, setTestimonials] = useState(null);
@@ -39,6 +48,10 @@ export default function HeadOffice({width}) {
         fetchContent(Query.query_getBlueButton).then((data) => {
             data.buttons.items[0] && setBlueButton(data.buttons.items[0]);
         });
+
+        fetchContent(Query.query_getRoleTitle).then((data) => {
+            data.roleTitles.items[0] && setRoleTitle(data.roleTitles.items[0])
+        })
 
         fetchContent(Query.query_getVideo).then((data) => {
             data.videoCollection.items && setVideoData(data.videoCollection.items[0]);
@@ -81,12 +94,11 @@ export default function HeadOffice({width}) {
                 (blueButton && blueButton.toggleShow) &&
                 <div className="col-12 vacancy-header">
                     <div className="half-width centered-content text-card">
-                        <NavLink
-                            to="#vacancy_section"
-                            scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
-                        >
-                            <h4 className="span-all-columns h4-responsive mb-0">{blueButton.text}</h4>
-                        </NavLink>
+                        <p onClick={scrollToVacancy}>
+                            <h4 className="span-all-columns h4-responsive mb-0">
+                            {blueButton.text}
+                            </h4>
+                        </p>
                     </div>
                 </div>
             }
@@ -119,8 +131,11 @@ export default function HeadOffice({width}) {
                 roleData &&
                 <div className='service-section py-5 bg-white'>
                     <section className="section-card container">
-                        <h3 className="span-all-columns h3-responsive main-text mb-5">
-                            Roles in a Cash Converters Store</h3>
+                        {(roleTitle && roleTitle.title && roleTitle.toggleShow) &&
+                            <h3 className="span-all-columns h3-responsive main-text mb-5">
+                                {roleTitle.title}
+                            </h3>
+                        }
 
                         <div className="service-section py-5 bg-white">
                             <section className="container section-card">
@@ -136,7 +151,7 @@ export default function HeadOffice({width}) {
                 </div>
             }
             
-            <div id="vacancy_section" className='service-section bg-section pb-0'>
+            <div ref={vacancySection} id="vacancy_section" className='service-section bg-section pb-0'>
                 <section className="section-card container py-5">
                     <Vacancy />
                 </section>
@@ -154,6 +169,5 @@ export default function HeadOffice({width}) {
                 </div>
             }
         </div>
-        
     )
 }
